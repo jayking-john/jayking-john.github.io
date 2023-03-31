@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+  <link rel="mask-icon" href="/images/logo.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jayking-john.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="数据详情介绍 清华大学地球系统科学系黄小猛教授科研团队在《科学通报》（Science Bulletin）上发表题为“3弧秒全球DEM数据集的超分辨率重建”（Super-resolution reconstruction of a 3 arc-second global DEM dataset）的数据论文，采用Transfer Learning技术优化了GEBCO（世界大洋深度图），生成了全球3弧秒">
+<meta property="og:type" content="article">
+<meta property="og:title" content="全球3弧秒超分辨率DEM数据集">
+<meta property="og:url" content="https://jayking-john.github.io/2023/03/31/quan-qiu-3-hu-miao-chao-fen-bian-lu-dem-shu-ju-ji/index.html">
+<meta property="og:site_name" content="GeoScienceLab">
+<meta property="og:description" content="数据详情介绍 清华大学地球系统科学系黄小猛教授科研团队在《科学通报》（Science Bulletin）上发表题为“3弧秒全球DEM数据集的超分辨率重建”（Super-resolution reconstruction of a 3 arc-second global DEM dataset）的数据论文，采用Transfer Learning技术优化了GEBCO（世界大洋深度图），生成了全球3弧秒">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://thumbnail1.baidupcs.com/thumbnail/84b390d99j1ecd0a8f0f16d2c484ed65?fid=154996032-250528-913796376176762&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-FTSgDOuE0obP5YX3tSsYOVdZqrk%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8996535924997639403&dp-callid=0&time=1680246000&size=c1920_u1080&quality=90&vuk=154996032&ft=image&autopolicy=1">
+<meta property="article:published_time" content="2023-03-31T03:30:52.000Z">
+<meta property="article:modified_time" content="2023-03-31T09:19:04.865Z">
+<meta property="article:author" content="GeoScienceLab">
+<meta property="article:tag" content="数据">
+<meta property="article:tag" content="资源">
+<meta property="article:tag" content="DEM">
+<meta property="article:tag" content="空间数据">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://thumbnail1.baidupcs.com/thumbnail/84b390d99j1ecd0a8f0f16d2c484ed65?fid=154996032-250528-913796376176762&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-FTSgDOuE0obP5YX3tSsYOVdZqrk%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8996535924997639403&dp-callid=0&time=1680246000&size=c1920_u1080&quality=90&vuk=154996032&ft=image&autopolicy=1">
+
+
+<link rel="canonical" href="https://jayking-john.github.io/2023/03/31/quan-qiu-3-hu-miao-chao-fen-bian-lu-dem-shu-ju-ji/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jayking-john.github.io/2023/03/31/quan-qiu-3-hu-miao-chao-fen-bian-lu-dem-shu-ju-ji/","path":"2023/03/31/quan-qiu-3-hu-miao-chao-fen-bian-lu-dem-shu-ju-ji/","title":"全球3弧秒超分辨率DEM数据集"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>全球3弧秒超分辨率DEM数据集 | GeoScienceLab</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">GeoScienceLab</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">地理科学实验室</p>
+      <img class="custom-logo-image" src="/images/logo4.png" alt="GeoScienceLab">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-技术文档"><a href="/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/" rel="section"><i class="fa fa-tools fa-fw"></i>技术文档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%AF%A6%E6%83%85%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">数据详情介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9"><span class="nav-number">1.1.</span> <span class="nav-text">1、主要内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.2.</span> <span class="nav-text">2、下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%B0%8F%E7%BB%93"><span class="nav-number">1.3.</span> <span class="nav-text">3、小结</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="GeoScienceLab"
+      src="https://thumbnail1.baidupcs.com/thumbnail/1155ccaf2t16a04992dee11ccbce6f19?fid=154996032-250528-713373932543244&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-EDZDGCP%2bjdNxfTCdumQYLPGmhsk%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8997886898167687110&dp-callid=0&time=1680249600&size=c1920_u1080&quality=90&vuk=154996032&ft=image&autopolicy=1">
+  <p class="site-author-name" itemprop="name">GeoScienceLab</p>
+  <div class="site-description" itemprop="description">遥感, 地信, Remote Sensing, GIS, Spatiotemporal Data, Technology</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:jayking-john@gmail.com" title="E-Mail → mailto:jayking-john@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/jayking-john" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jayking-john" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1272792144&website=www.oicqzone.com" title="QQ → tencent:&#x2F;&#x2F;AddContact&#x2F;?fromId&#x3D;45&amp;fromSubId&#x3D;1&amp;subcmd&#x3D;all&amp;uin&#x3D;1272792144&amp;website&#x3D;www.oicqzone.com" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.researchgate.net/profile/Huiwen-Li-2" title="ResearchG → https:&#x2F;&#x2F;www.researchgate.net&#x2F;profile&#x2F;Huiwen-Li-2" rel="noopener me" target="_blank"><i class="fab fa-researchgate fa-fw"></i>ResearchG</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://google.com/" title="https:&#x2F;&#x2F;google.com" rel="noopener" target="_blank">Google</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://baidu.com/" title="https:&#x2F;&#x2F;baidu.com" rel="noopener" target="_blank">Baidu</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    
+    <div class="post-gallery-image">
+      <img src="https://thumbnail1.baidupcs.com/thumbnail/84b390d99j1ecd0a8f0f16d2c484ed65?fid=154996032-250528-913796376176762&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-FTSgDOuE0obP5YX3tSsYOVdZqrk%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8996535924997639403&dp-callid=0&time=1680246000&size=c1920_u1080&quality=90&vuk=154996032&ft=image&autopolicy=1" itemprop="contentUrl">
+    </div>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jayking-john.github.io/2023/03/31/quan-qiu-3-hu-miao-chao-fen-bian-lu-dem-shu-ju-ji/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://thumbnail1.baidupcs.com/thumbnail/1155ccaf2t16a04992dee11ccbce6f19?fid=154996032-250528-713373932543244&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-EDZDGCP%2bjdNxfTCdumQYLPGmhsk%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8997886898167687110&dp-callid=0&time=1680249600&size=c1920_u1080&quality=90&vuk=154996032&ft=image&autopolicy=1">
+      <meta itemprop="name" content="GeoScienceLab">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GeoScienceLab">
+      <meta itemprop="description" content="遥感, 地信, Remote Sensing, GIS, Spatiotemporal Data, Technology">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="全球3弧秒超分辨率DEM数据集 | GeoScienceLab">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          全球3弧秒超分辨率DEM数据集
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-03-31 11:30:52 / 修改时间：17:19:04" itemprop="dateCreated datePublished" datetime="2023-03-31T11:30:52+08:00">2023-03-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E8%B5%84%E6%BA%90/" itemprop="url" rel="index"><span itemprop="name">数据资源</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E8%B5%84%E6%BA%90/%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index"><span itemprop="name">网络数据</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E8%B5%84%E6%BA%90/%E6%9C%AC%E5%9C%B0%E5%B7%B2%E4%B8%8B%E8%BD%BD%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index"><span itemprop="name">本地已下载数据</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95/" itemprop="url" rel="index"><span itemprop="name">数据记录</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="数据详情介绍"><a href="#数据详情介绍" class="headerlink" title="数据详情介绍"></a>数据详情介绍</h1><p>
+清华大学地球系统科学系黄小猛教授科研团队在《科学通报》（Science Bulletin）上发表题为“3弧秒全球DEM数据集的超分辨率重建”（Super-resolution reconstruction of a 3 arc-second global DEM dataset）的数据论文，采用Transfer Learning技术优化了GEBCO（世界大洋深度图），生成了全球3弧秒（90m）DEM模型（GDEM_2022)，并发布在清华云盘上。
+</p>
+<span id="more"></span>
+
+<blockquote>
+<p>本文摘录了论文的重要内容，并给出批量下载方法。</p>
+</blockquote>
+<h2 id="1、主要内容"><a href="#1、主要内容" class="headerlink" title="1、主要内容"></a>1、主要内容</h2><p>2020年，NASADEM和FABDEM免费提供世界陆地30米分辨率的DEM。获取测深数据，融合不同分辨率和传感器的水深数据极具挑战性。本文使用超分辨率(SR)的深度学习技术识别和补偿分辨率和传感器之间的差异，融合30米分辨率的NASADEM、GEBCO_2021数据和众多高分辨率(HR)区域海洋DEM数据集，生成分辨率为3角秒的全球DEM数据集。</p>
+<img src="https://thumbnail1.baidupcs.com/thumbnail/3bed581a6je0721b6e38f298db51085e?fid=154996032-250528-1061779697517069&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-EaSEKNpu4fVUFp%2f%2bhk9FGjrPrm0%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8996171301267807557&dp-callid=0&time=1680242400&size=c1920_u1080&quality=90&vuk=154996032&ft=image&autopolicy=1"/>
+
+<p>如果使用陆地样本集来训练深度学习网络模型，则得到的模型仅适用于陆地领域。有证据表明陆地和海洋的地形非常相似。板块运动导致海洋和陆地持续变化。迁移学习（transfer learning）使用从源领域获取的知识解决目标领域新的相关问题。因此，这项研究利用陆地和海洋的相似性来弥补测深数据的相对不足。</p>
+<p>NASADEM是一个分辨率为1角秒(30米)的数据集，覆盖了北纬60度至南纬56度之间80%的地球领土，没有测深数据</p>
+<p>GEBCO_2021网格在15角秒网格上提供全球覆盖，具有43,200行和86,400列，总共3,732,480,000个数据点。</p>
+<p>与陆地区域的DEM数据集相比，海洋区域的分辨率仍然很低。本文的主要贡献是利用GEBCO_2021和NASADEM陆地样本对神经网络模型进行预训练，然后利用有限的区域海洋DEM数据进行附加微调。</p>
+<img src="https://thumbnail1.baidupcs.com/thumbnail/c51576f46r2ddaddf612313677884c2e?fid=154996032-250528-212297653300041&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-o2X6YpYLqmLJinvILilupGl%2bLSo%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8996171301267807557&dp-callid=0&time=1680242400&size=c1920_u1080&quality=90&vuk=154996032&ft=image&autopolicy=1">
+
+<p>陆地HR DEM数据集是通过使用双三次插值法对1角秒的NASADEM重采样形成的。选择TanDEM-X 3弧秒数据测试陆地区域验证模型的准确性。</p>
+<p>重采样的单波束、多波束、海图数据和卫星反演技术获得的其他HR区域海洋DEM数据集用于迁移学习和测试。</p>
+<p>所有DEM数据集采用WGS84坐标系和EGM96大地水准面，灰度值被归一化为0到1之间的值。</p>
+<p>为了生成训练集和验证集，对数据集执行了随机80&#x2F;20拆分，该数据集包含大约579,900个全球分布的陆地样本单元。用于微调的迁移学习和测试数据集包含大约28 500个海洋样本，这些样本均匀分布在世界各海洋区域。在预处理阶段，使用ArcGIS 10.3和Python GDAL对整个数据集进行预处理。HR NASADEM和区域海洋DEM被分割成160×160像素的小块，而LR(低分辨率)GEBCO_2021被分割成32×32像素的小块。修补前，缺失的DEM值已从数据集中移除。</p>
+<p>本文提出了一种叫做DEM-SRNet深度残差网络用于预处理DEM数据。相对于双三次(传统)插值，均方根误差（RMSE）平均提高了23.75%。陆地试验区域表明，DEMSRNet模型在RMSE方面优于现有的超分辨率（SR）模型。</p>
+<p>超分辨率是通过软件或硬件方法，提高图像分辨率的一种方法。它的核心思想，就是用时间带宽换取空间分辨率。简单来讲，就是在我无法得到一张超高分辨率的图像时，我可以多拍几张图像，然后将这一系列低分辨率的图像组成一张高分辨的图像。这个过程叫超分辨率重建。</p>
+<p>GDEM 2022和高分辨率（HR）区域海洋DEM数据集之间的平均绝对垂直误差达到19.58米，超过63.99%的绝对误差小于10米。在清晰度和细节方面，GDEM 2022优于GEBCO 2021。未来的努力将集中于增强SR模型从低分辨率输入图像中识别和消除系统误差信息的能力。样本不足仍然是我们目前工作的局限。获取更多的HR海洋样本数据集以提高模型的概化能力和准确性是未来需要解决的重要课题。我们预计，GDEM 2022数据集和DEM-SRNet模型(用于从世界各地获取HR测深数据)将扩大DEM数据社区，并激励其他研究小组取得更好的成果。</p>
+<h2 id="2、下载"><a href="#2、下载" class="headerlink" title="2、下载"></a>2、下载</h2><p>GDEM2022数据下载地址：<a target="_blank" rel="noopener" href="https://cloud.tsinghua.edu.cn/d/695ed43696564904980f/?p=%2F&mode=list">下载地址</a></p>
+<img src="https://thumbnail1.baidupcs.com/thumbnail/563597372idfee4d9f55497801927e58?fid=154996032-250528-343334139517072&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-RIoP0QMegqpE93bKxcge7ZWciw4%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8996171301267807557&dp-callid=0&time=1680242400&size=c1920_u1080&quality=90&vuk=154996032&ft=image&autopolicy=1"/>
+
+<p>根据自己所需数据的范围，下载对应的tiff文件即可。</p>
+<p>如果想要下载一定范围的tiff数据，比如15-35N，30-45E，可以通过如下代码： </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;#!/bin/bash&#x27;</span> &gt;dload.sh</span><br><span class="line"><span class="keyword">for</span>((i=<span class="number">15</span>;i&lt;=<span class="number">35</span>;i+=<span class="number">5</span>))</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line"><span class="keyword">for</span>((j=<span class="number">30</span>;j&lt;=<span class="number">45</span>;j+=<span class="number">5</span>))</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">f=$(curl -GILs https://cloud.tsinghua.edu.cn/d/695ed43696564904980f/files/?</span><br><span class="line">p=/n<span class="variable">$&#123;i&#125;</span>e<span class="variable">$&#123;j&#125;</span>.tif\&amp;dl=1 | grep location )</span><br><span class="line">curl -C - -O <span class="variable">$&#123;f/location:/&#125;</span></span><br><span class="line"><span class="built_in">echo</span> curl -C - -O <span class="variable">$&#123;f/location:/&#125;</span> &gt;&gt; dload.sh</span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="keyword">for</span>((j=<span class="number">5</span>;j&lt;=<span class="number">180</span>;j+=<span class="number">5</span>))</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line"></span><br><span class="line">f=$(curl -GILs https://cloud.tsinghua.edu.cn/d/695ed43696564904980f/files/?</span><br><span class="line">p=/n<span class="variable">$&#123;i&#125;</span>w<span class="variable">$&#123;j&#125;</span>.tif\&amp;dl=1 | grep location )</span><br><span class="line"><span class="built_in">echo</span> curl -C - -O <span class="variable">$&#123;f/location:/&#125;</span></span><br><span class="line"><span class="built_in">echo</span> curl -C - -O <span class="variable">$&#123;f/location:/&#125;</span> &gt;&gt; dload.sh</span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="keyword">for</span>((i=<span class="number">5</span>;i&lt;=<span class="number">85</span>;i+=<span class="number">5</span>))</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line"><span class="keyword">for</span>((j=<span class="number">0</span>;j&lt;=<span class="number">175</span>;j+=<span class="number">5</span>))</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">f=$(curl -GILs https://cloud.tsinghua.edu.cn/d/695ed43696564904980f/files/?</span><br><span class="line">p=/s<span class="variable">$&#123;i&#125;</span>e<span class="variable">$&#123;j&#125;</span>.tif\&amp;dl=1 | grep location )</span><br><span class="line"><span class="built_in">echo</span> curl -C - -O <span class="variable">$&#123;f/location:/&#125;</span></span><br><span class="line"><span class="built_in">echo</span> curl -C - -O <span class="variable">$&#123;f/location:/&#125;</span> &gt;&gt; dload.sh</span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="keyword">for</span>((j=<span class="number">5</span>;j&lt;=<span class="number">180</span>;j+=<span class="number">5</span>))</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">f=$(curl -GILs https://cloud.tsinghua.edu.cn/d/695ed43696564904980f/files/?</span><br><span class="line">p=/s<span class="variable">$&#123;i&#125;</span>w<span class="variable">$&#123;j&#125;</span>.tif\&amp;dl=1 | grep location )</span><br><span class="line"><span class="built_in">echo</span> curl -C - -O <span class="variable">$&#123;f/location:/&#125;</span></span><br><span class="line"><span class="built_in">echo</span> curl -C - -O <span class="variable">$&#123;f/location:/&#125;</span> &gt;&gt; dload.sh</span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<h2 id="3、小结"><a href="#3、小结" class="headerlink" title="3、小结"></a>3、小结</h2><p>本文提供的GDEM2022是博主第一次见到中国学者公开发布的全球成果数据。我们必须给本文的作者们点一个大大的赞。GEBCO大洋数据大部分采用卫星重力反演出来的，在其使用过程中，我们已经注意到它的一些细节方面的缺陷。幸运的是，本文采用先进的与现在的大火的chatGPT一脉相承的迁移学习（Transfer Learning）技术，在细节和清晰度方面优化了GEBCO。这真是一件对海洋从业者来说功德无量的事情。</p>
+<blockquote>
+<p>参考文献：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/giselite/article/details/128873456">https://blog.csdn.net/giselite/article/details/128873456</a><br><a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S2095927322005412">https://www.sciencedirect.com/science/article/pii/S2095927322005412</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/giselite/article/details/128873456">https://blog.csdn.net/giselite/article/details/128873456</a></p>
+</blockquote>
+<hr>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/reward/wechatpay.png" alt="GeoScienceLab 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E6%8D%AE/" rel="tag"><i class="fa fa-tag"></i> 数据</a>
+              <a href="/tags/%E8%B5%84%E6%BA%90/" rel="tag"><i class="fa fa-tag"></i> 资源</a>
+              <a href="/tags/DEM/" rel="tag"><i class="fa fa-tag"></i> DEM</a>
+              <a href="/tags/%E7%A9%BA%E9%97%B4%E6%95%B0%E6%8D%AE/" rel="tag"><i class="fa fa-tag"></i> 空间数据</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/03/31/zhong-guo-sen-lin-sheng-tai-xi-tong-bu-tong-shi-jian-chi-du-tu-rang-hu-xi-shu-ju-ku/" rel="prev" title="科研数据|中国森林生态系统不同时间尺度土壤呼吸数据库(2000-2018)">
+                  <i class="fa fa-chevron-left"></i> 科研数据|中国森林生态系统不同时间尺度土壤呼吸数据库(2000-2018)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/03/30/hello-world/" rel="next" title="Hello World">
+                  Hello World <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Smith</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">3k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">10 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
