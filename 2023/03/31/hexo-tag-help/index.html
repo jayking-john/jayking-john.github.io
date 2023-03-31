@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#708090"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+  <link rel="mask-icon" href="/images/logo.png" color="#708090">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jayking-john.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"livere","storage":true,"lazyload":false,"nav":null,"activeClass":"livere"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Hexo博客NexT主题几个插件的使用方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客NexT主题中的插件使用">
+<meta property="og:url" content="https://jayking-john.github.io/2023/03/31/hexo-tag-help/index.html">
+<meta property="og:site_name" content="GeoScienceLab">
+<meta property="og:description" content="Hexo博客NexT主题几个插件的使用方法">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://theme-next.js.org/images/next-schemes.png">
+<meta property="article:published_time" content="2023-03-31T12:00:19.000Z">
+<meta property="article:modified_time" content="2023-03-31T14:07:48.241Z">
+<meta property="article:author" content="GeoScienceLab">
+<meta property="article:tag" content="技术文档">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="NexT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://theme-next.js.org/images/next-schemes.png">
+
+
+<link rel="canonical" href="https://jayking-john.github.io/2023/03/31/hexo-tag-help/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jayking-john.github.io/2023/03/31/hexo-tag-help/","path":"2023/03/31/hexo-tag-help/","title":"Hexo博客NexT主题中的插件使用"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Hexo博客NexT主题中的插件使用 | GeoScienceLab</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">GeoScienceLab</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">地理科学实验室</p>
+      <img class="custom-logo-image" src="/images/logo4.png" alt="GeoScienceLab">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-技术文档"><a href="/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/" rel="section"><i class="fa fa-tools fa-fw"></i>技术文档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tag-Plugins"><span class="nav-number">1.</span> <span class="nav-text">Tag Plugins</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Label-%E6%A0%87%E7%AD%BE"><span class="nav-number">1.1.</span> <span class="nav-text">Label 标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">1.1.1.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.1.2.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Link-Grid-%E9%93%BE%E6%8E%A5%E7%BD%91%E6%A0%BC"><span class="nav-number">1.2.</span> <span class="nav-text">Link Grid 链接网格</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tabs-%E6%A0%87%E7%AD%BE%E9%A1%B5"><span class="nav-number">1.3.</span> <span class="nav-text">Tabs 标签页</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NexT-config%E9%85%8D%E7%BD%AE"><span class="nav-number">1.3.1.</span> <span class="nav-text">NexT config配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E7%94%9F%E6%88%90%E4%BB%A5unique-name%E4%B8%BA%E5%89%8D%E7%BC%80%E7%9A%84tabs"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">默认生成以unique name为前缀的tabs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E9%80%89%E6%8B%A9%E4%BA%86%E7%AC%AC%E4%B8%89%E4%B8%AAtab"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">默认选择了第三个tab</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E4%BB%BB%E4%BD%95tab%E9%83%BD%E4%B8%8D%E9%80%89%E6%8B%A9"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">默认任何tab都不选择</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%A6%E6%9C%89%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%87%E7%AD%BE%E7%9A%84tabs"><span class="nav-number">1.3.3.4.</span> <span class="nav-text">带有自定义标签的tabs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AA%E6%9C%89%E5%9B%BE%E6%A0%87%E7%9A%84tabs"><span class="nav-number">1.3.3.5.</span> <span class="nav-text">只有图标的tabs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%87%E7%AD%BE%E5%89%8D%E9%93%BE%E6%8E%A5"><span class="nav-number">1.3.3.6.</span> <span class="nav-text">标签前链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%A6%E6%9C%89%E5%85%B6%E4%BB%96%E6%A0%87%E7%AD%BE%E7%9A%84%E6%A0%87%E7%AD%BE"><span class="nav-number">1.3.3.7.</span> <span class="nav-text">带有其他标签的标签</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="GeoScienceLab"
+      src="https://thumbnail1.baidupcs.com/thumbnail/1155ccaf2t16a04992dee11ccbce6f19?fid=154996032-250528-713373932543244&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-EDZDGCP%2bjdNxfTCdumQYLPGmhsk%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8997886898167687110&dp-callid=0&time=1680249600&size=c1920_u1080&quality=90&vuk=154996032&ft=image&autopolicy=1">
+  <p class="site-author-name" itemprop="name">GeoScienceLab</p>
+  <div class="site-description" itemprop="description">遥感, 地信, Remote Sensing, GIS, Spatiotemporal Data, Technology</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:jayking-john@gmail.com" title="E-Mail → mailto:jayking-john@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/jayking-john" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jayking-john" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1272792144&website=www.oicqzone.com" title="QQ → tencent:&#x2F;&#x2F;AddContact&#x2F;?fromId&#x3D;45&amp;fromSubId&#x3D;1&amp;subcmd&#x3D;all&amp;uin&#x3D;1272792144&amp;website&#x3D;www.oicqzone.com" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.researchgate.net/profile/Huiwen-Li-2" title="ResearchG → https:&#x2F;&#x2F;www.researchgate.net&#x2F;profile&#x2F;Huiwen-Li-2" rel="noopener me" target="_blank"><i class="fab fa-researchgate fa-fw"></i>ResearchG</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://google.com/" title="https:&#x2F;&#x2F;google.com" rel="noopener" target="_blank">Google</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://baidu.com/" title="https:&#x2F;&#x2F;baidu.com" rel="noopener" target="_blank">Baidu</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    
+    <div class="post-gallery-image">
+      <img src="https://theme-next.js.org/images/next-schemes.png" itemprop="contentUrl">
+    </div>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jayking-john.github.io/2023/03/31/hexo-tag-help/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://thumbnail1.baidupcs.com/thumbnail/1155ccaf2t16a04992dee11ccbce6f19?fid=154996032-250528-713373932543244&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-EDZDGCP%2bjdNxfTCdumQYLPGmhsk%3d&expires=8h&chkbd=0&chkv=0&dp-logid=8997886898167687110&dp-callid=0&time=1680249600&size=c1920_u1080&quality=90&vuk=154996032&ft=image&autopolicy=1">
+      <meta itemprop="name" content="GeoScienceLab">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GeoScienceLab">
+      <meta itemprop="description" content="遥感, 地信, Remote Sensing, GIS, Spatiotemporal Data, Technology">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Hexo博客NexT主题中的插件使用 | GeoScienceLab">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo博客NexT主题中的插件使用
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-03-31 20:00:19 / 修改时间：22:07:48" itemprop="dateCreated datePublished" datetime="2023-03-31T20:00:19+08:00">2023-03-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">技术文档</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/%E5%8D%9A%E5%AE%A2%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">博客技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Hexo/%E6%8F%92%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">插件</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Hexo/NexT/" itemprop="url" rel="index"><span itemprop="name">NexT</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>14 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <blockquote class="blockquote-center">
+<p>Hexo博客NexT主题几个插件的使用方法</p>
+
+</blockquote>
+
+<span id="more"></span>
+
+<h1 id="Tag-Plugins"><a href="#Tag-Plugins" class="headerlink" title="Tag Plugins"></a>Tag Plugins</h1><h2 id="Label-标签"><a href="#Label-标签" class="headerlink" title="Label 标签"></a>Label 标签</h2><h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% label [<span class="keyword">class</span>]@text %&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>[<mark class="label default">class</mark>]: <em>可选参数</em>. 支持的参数: <mark class="label default">default</mark> | <mark class="label primary">primary</mark> | <mark class="label success">success</mark> | <mark class="label info">info</mark> | <mark class="label warning">warning</mark> | <mark class="label danger">danger</mark>.</li>
+<li>如果没有指定，将使用浏览器的默认样式，这在不同的浏览器中可能不同.</li>
+<li><mark class="label default">text</mark> : @text 可以指定有空格还是没有空格. </li>
+<li>例如: success @text 和 success@text 是等价的</li>
+</ul>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">臣本&#123;% label @布衣 %&#125;, 躬耕于&#123;% label primary@南阳 %&#125;, 苟全&#123;% label success@性命于乱世%&#125;, 不求闻达于&#123;% label info@诸侯%&#125;。 *&#123;% label warning @先帝%&#125;* 不以臣 **&#123;% label danger@卑鄙%&#125;**, ~~&#123;% label <span class="keyword">default</span> @猥自枉屈 %&#125;~~, <span class="language-xml"><span class="tag">&lt;<span class="name">mark</span>&gt;</span>三顾臣于草庐之中<span class="tag">&lt;/<span class="name">mark</span>&gt;</span></span>, 咨臣以当世之事, 由是感激, 遂许先帝以驱驰。</span><br></pre></td></tr></table></figure>
+<p>臣本<mark class="label ">布衣</mark>, 躬耕于<mark class="label primary">南阳</mark>, 苟全<mark class="label success">性命于乱世</mark>, 不求闻达于<mark class="label info">诸侯</mark>。 <em><mark class="label warning">先帝</mark></em> 不以臣 <strong><mark class="label danger">卑鄙</mark></strong> , <del><mark class="label default">猥自枉屈</mark></del>, <mark>三顾臣于草庐之中</mark>, 咨臣以当世之事, 由是感激, 遂许先帝以驱驰。</p>
+<hr>
+<h2 id="Link-Grid-链接网格"><a href="#Link-Grid-链接网格" class="headerlink" title="Link Grid 链接网格"></a>Link Grid 链接网格</h2><h3 id="使用方法-1"><a href="#使用方法-1" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% linkgrid [image] [delimiter] [comment] %&#125;</span><br><span class="line">&#123;% endlinkgrid %&#125;</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% lg [image] [delimiter] [comment] %&#125;</span><br><span class="line">&#123;% endlg %&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>[<mark class="label default">image</mark>]: <em>可选参数</em>. 默认图像URL.</li>
+<li>[<mark class="label default">delimiter</mark>]: <em>可选参数</em>. 如果给出了可选的分隔符delimiter参数，则它将被解释为每行中项目的分隔符。</li>
+<li>[<mark class="label default">comment</mark>]: <em>可选参数</em>. 如果给出了可选的comment参数，它将被解释为标注一行的符号。</li>
+</ul>
+<h3 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;% linkgrid %&#125;</span><br><span class="line"><span class="title class_">Theme</span> <span class="title class_">NexT</span> | <span class="attr">https</span>:<span class="comment">//theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="title class_">Theme</span> <span class="title class_">NexT</span> | <span class="attr">https</span>:<span class="comment">//theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="title class_">Theme</span> <span class="title class_">NexT</span> | <span class="attr">https</span>:<span class="comment">//theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="title class_">Theme</span> <span class="title class_">NexT</span> | <span class="attr">https</span>:<span class="comment">//theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span></span><br><span class="line">% <span class="title class_">Theme</span> <span class="title class_">NexT</span> | <span class="attr">https</span>:<span class="comment">//theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span></span><br><span class="line">&#123;% endlinkgrid %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% linkgrid %&#125;</span><br><span class="line">技术文档| <span class="regexp">/技术文档/</span> | 好记性不如烂键盘. | <span class="regexp">/images/</span>logo.<span class="property">png</span></span><br><span class="line">分类页面| <span class="regexp">/categories/</span> | 好记性不如烂键盘. | <span class="regexp">/images/</span>logo.<span class="property">png</span></span><br><span class="line">% 技术文档| <span class="regexp">/技术文档/</span> | 人生苦短. 我用<span class="title class_">Python</span>. | <span class="regexp">/images/</span>logo.<span class="property">png</span></span><br><span class="line">&#123;% endlinkgrid %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/logo.png"></object>
+<p>技术文档</p><p>好记性不如烂键盘.</p>
+<a href="/技术文档/"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="/images/logo.png"></object>
+<p>分类页面</p><p>好记性不如烂键盘.</p>
+<a href="/categories/"></a>
+</div></div>
+
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;% lg /images/apple-touch-icon-next.<span class="property">png</span> , %&#125;</span><br><span class="line"><span class="title class_">Theme</span> <span class="title class_">NexT</span> , <span class="attr">https</span>:<span class="comment">//theme-next.js.org/ , Stay Simple. Stay NexT. , /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="title class_">Theme</span> <span class="title class_">NexT</span> , <span class="attr">https</span>:<span class="comment">//theme-next.js.org/ , Stay Simple. Stay NexT. , /images/apple-touch-icon-next.png</span></span><br><span class="line"><span class="title class_">Theme</span> <span class="title class_">NexT</span> , <span class="attr">https</span>:<span class="comment">//theme-next.js.org/ , Stay Simple. Stay NexT. , /images/apple-touch-icon-next.png</span></span><br><span class="line">% <span class="title class_">Theme</span> <span class="title class_">NexT</span> , <span class="attr">https</span>:<span class="comment">//theme-next.js.org/ , Stay Simple. Stay NexT. , /images/apple-touch-icon-next.png</span></span><br><span class="line">&#123;% endlg %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% lg /images/logo.<span class="property">png</span> , %&#125;</span><br><span class="line">技术文档, <span class="regexp">/技术文档/</span> , 好记性不如烂键盘. </span><br><span class="line">分类页面, <span class="regexp">/categories/</span> , 人生苦短. 我用<span class="title class_">Python</span>. </span><br><span class="line">% 技术文档, <span class="regexp">/技术文档/</span> , 好记性不如烂键盘. , <span class="regexp">/images/</span>logo.<span class="property">png</span></span><br><span class="line">&#123;% endlg %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/logo.png"></object>
+<p>技术文档</p><p>好记性不如烂键盘.</p>
+<a href="/技术文档/"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="/images/logo.png"></object>
+<p><mark class="label success">分类页面</mark></p><p>人生苦短. 我用Python.</p>
+<a href="/categories/"></a>
+</div></div>
+
+<hr>
+<h2 id="Tabs-标签页"><a href="#Tabs-标签页" class="headerlink" title="Tabs 标签页"></a>Tabs 标签页</h2><h3 id="NexT-config配置"><a href="#NexT-config配置" class="headerlink" title="NexT config配置"></a>NexT config配置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">tabs</span>:</span><br><span class="line">  # <span class="title class_">Make</span> the nav bar <span class="keyword">of</span> tabs <span class="keyword">with</span> long content stick to the top.</span><br><span class="line">  <span class="attr">sticky</span>: <span class="literal">false</span></span><br><span class="line">  <span class="attr">transition</span>:</span><br><span class="line">    <span class="attr">tabs</span>: <span class="literal">false</span></span><br><span class="line">    <span class="attr">labels</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用方法-2"><a href="#使用方法-2" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs <span class="title class_">Unique</span> name, [index] %&#125;</span><br><span class="line">&lt;!-- tab [<span class="title class_">Tab</span> caption] [@icon] --&gt;</span><br><span class="line"><span class="title class_">Any</span> content (support inline tags too).</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>[<mark class="label default">Unique name</mark>]：标签块标签的唯一名称，不带逗号。<ul>
+<li>将在#id’s中用作每个标签及其索引号的前缀。</li>
+<li>如果名称中有空格，对于生成#id，所有空格将被破折号取代。</li>
+<li>仅对于当前的post&#x2F;page URL，必须是唯一的！</li>
+</ul>
+</li>
+<li>[<mark class="label default">index</mark>]：活动选项卡的索引号。<ul>
+<li>如果没有指定，第一个选项卡(1)将被选中。</li>
+<li>如果index为-1，则不选择任何选项卡。这有点像剧透。</li>
+<li><em>可选参数</em>。</li>
+</ul>
+</li>
+<li>[<mark class="label default">Tab caption</mark>]：当前标签的标题。<ul>
+<li>如果没有指定标题，带有标签索引后缀的唯一名称将被用作标签标题。</li>
+<li>如果没有指定标题，但指定了图标，标题将为空。</li>
+<li><em>可选参数</em>。</li>
+</ul>
+</li>
+<li>[@icon]：Font Awesome图标名称。<ul>
+<li>可以指定有或没有空格;如 ‘Tab caption @icon’ 与 ‘Tab caption@icon’等同。</li>
+<li><em>可选参数</em>。</li>
+</ul>
+</li>
+</ul>
+<h3 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h3><h4 id="默认生成以unique-name为前缀的tabs"><a href="#默认生成以unique-name为前缀的tabs" class="headerlink" title="默认生成以unique name为前缀的tabs"></a>默认生成以unique name为前缀的tabs</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs <span class="title class_">First</span> unique name %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">1.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">2.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">3.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="tabs" id="first-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#first-unique-name-1">First unique name 1</a></li><li class="tab"><a href="#first-unique-name-2">First unique name 2</a></li><li class="tab"><a href="#first-unique-name-3">First unique name 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="first-unique-name-1"><p><strong>This is Tab 1.</strong></p>
+<p>必须注意的是tab前后是有空格的</p></div><div class="tab-pane" id="first-unique-name-2"><div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="/images/logo.png"></object>
+<p>技术文档</p><p>好记性不如烂键盘.</p>
+<a href="/技术文档/"></a>
+</div></div></div><div class="tab-pane" id="first-unique-name-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+
+
+<h4 id="默认选择了第三个tab"><a href="#默认选择了第三个tab" class="headerlink" title="默认选择了第三个tab"></a>默认选择了第三个tab</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs <span class="title class_">Second</span> unique name, <span class="number">3</span> %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">1.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">2.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">3.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<div class="tabs" id="second-unique-name"><ul class="nav-tabs"><li class="tab"><a href="#second-unique-name-1">Second unique name 1</a></li><li class="tab"><a href="#second-unique-name-2">Second unique name 2</a></li><li class="tab active"><a href="#second-unique-name-3">Second unique name 3</a></li></ul><div class="tab-content"><div class="tab-pane" id="second-unique-name-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="second-unique-name-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane active" id="second-unique-name-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+
+
+<h4 id="默认任何tab都不选择"><a href="#默认任何tab都不选择" class="headerlink" title="默认任何tab都不选择"></a>默认任何tab都不选择</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs <span class="title class_">Third</span> unique name, -<span class="number">1</span> %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">1.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">2.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">3.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<div class="tabs" id="third-unique-name"><ul class="nav-tabs"><li class="tab"><a href="#third-unique-name-1">Third unique name 1</a></li><li class="tab"><a href="#third-unique-name-2">Third unique name 2</a></li><li class="tab"><a href="#third-unique-name-3">Third unique name 3</a></li></ul><div class="tab-content"><div class="tab-pane" id="third-unique-name-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="third-unique-name-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="third-unique-name-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+
+
+<h4 id="带有自定义标签的tabs"><a href="#带有自定义标签的tabs" class="headerlink" title="带有自定义标签的tabs"></a>带有自定义标签的tabs</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs <span class="title class_">Fourth</span> unique name %&#125;</span><br><span class="line">&lt;!-- tab 名称<span class="number">1</span> --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">1.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab 名称<span class="number">1</span> --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">2.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab <span class="title class_">Solution</span> <span class="number">3</span> --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">3.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="tabs" id="fourth-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#fourth-unique-name-1">名称1</a></li><li class="tab"><a href="#fourth-unique-name-2">名称1</a></li><li class="tab"><a href="#fourth-unique-name-3">名称3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="fourth-unique-name-1"><p><strong>This is Tab 1.</strong></p>
+<p>tab的名称似乎是可以<mark class="label danger">一样</mark>的</p></div><div class="tab-pane" id="fourth-unique-name-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="fourth-unique-name-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+
+<h4 id="只有图标的tabs"><a href="#只有图标的tabs" class="headerlink" title="只有图标的tabs"></a>只有图标的tabs</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs <span class="title class_">Fifth</span> unique name %&#125;</span><br><span class="line">&lt;!-- tab @text-width --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">1.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab @font --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">2.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab @bold --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">3.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<div class="tabs" id="fifth-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#fifth-unique-name-1"><i class="fa fa-text-width"></i></a></li><li class="tab"><a href="#fifth-unique-name-2"><i class="fa fa-font"></i></a></li><li class="tab"><a href="#fifth-unique-name-3"><i class="fa fa-home"></i></a></li></ul><div class="tab-content"><div class="tab-pane active" id="fifth-unique-name-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="fifth-unique-name-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="fifth-unique-name-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+
+
+<h4 id="标签前链接"><a href="#标签前链接" class="headerlink" title="标签前链接"></a>标签前链接</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="title class_">Permalink</span> <span class="keyword">for</span> &gt; [<span class="title class_">Tab</span> one](#tab-one).</span><br><span class="line"><span class="title class_">Permalink</span> <span class="keyword">for</span> &gt; [<span class="title class_">Tab</span> one <span class="number">1</span>](#tab-one-<span class="number">1</span>).</span><br><span class="line"><span class="title class_">Permalink</span> <span class="keyword">for</span> &gt; [<span class="title class_">Tab</span> one <span class="number">2</span>](#tab-one-<span class="number">2</span>).</span><br><span class="line"><span class="title class_">Permalink</span> <span class="keyword">for</span> &gt; [<span class="title class_">Tab</span> one <span class="number">3</span>](#tab-one-<span class="number">3</span>).</span><br><span class="line"></span><br><span class="line"><span class="title class_">Permalink</span> <span class="keyword">for</span> &gt; [<span class="title class_">Tab</span> two](#tab-two).</span><br><span class="line"><span class="title class_">Permalink</span> <span class="keyword">for</span> &gt; [<span class="title class_">Tab</span> two <span class="number">1</span>](#tab-two-<span class="number">1</span>).</span><br><span class="line"><span class="title class_">Permalink</span> <span class="keyword">for</span> &gt; [<span class="title class_">Tab</span> two <span class="number">2</span>](#tab-two-<span class="number">2</span>).</span><br><span class="line"><span class="title class_">Permalink</span> <span class="keyword">for</span> &gt; [<span class="title class_">Tab</span> two <span class="number">3</span>](#tab-two-<span class="number">3</span>).</span><br><span class="line"></span><br><span class="line">&#123;% tabs <span class="title class_">Tab</span> one %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">1.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">2.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">3.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% tabs <span class="title class_">Tab</span> two %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">1.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">2.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">3.</span>**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>指向第一个tab</strong> &gt; <a href="#tab-one">Tab one</a>.<br><strong>指向第一个tab的第一个子tab</strong> &gt; <a href="#tab-one-1">Tab one 1</a>.<br><strong>指向第一个tab的第二个子tab</strong> &gt; <a href="#tab-one-2">Tab one 2</a>.<br><strong>指向第一个tab的第三个子tab</strong> &gt; <a href="#tab-one-3">Tab one 3</a>.</p>
+<p>指向哪个tab，用-连接tab中具有空格的名字,全部转为小写，无法指定图标tabs的具体哪一个tab</p>	
+
+<p><strong>指向前面的Tab</strong> &gt; <a href="#fifth-unique-name">Fifth unique name</a></p>
+<p><strong>指向前面的Tab</strong> &gt; <a href="#third-unique-name-3">Third unique name</a></p>
+<p>对于默认序号的，用tab名称-序号的方式访问，但好像有bug，因此，tabs不宜过多，名称需要明确</p>
+
+<p>Permalink for &gt; <a href="#tab-two">Tab two</a>.<br>Permalink for &gt; <a href="#tab-two-1">Tab two 1</a>.<br>Permalink for &gt; <a href="#tab-two-2">Tab two 2</a>.<br>Permalink for &gt; <a href="#tab-two-3">Tab two 3</a>.</p>
+<div class="tabs" id="tab-one"><ul class="nav-tabs"><li class="tab active"><a href="#tab-one-1">Tab one 1</a></li><li class="tab"><a href="#tab-one-2">Tab one 2</a></li><li class="tab"><a href="#tab-one-3">Tab one 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-one-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="tab-one-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="tab-one-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+
+<div class="tabs" id="tab-two"><ul class="nav-tabs"><li class="tab active"><a href="#tab-two-1">Tab two 1</a></li><li class="tab"><a href="#tab-two-2">Tab two 2</a></li><li class="tab"><a href="#tab-two-3">Tab two 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab-two-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="tab-two-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="tab-two-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+
+
+<h4 id="带有其他标签的标签"><a href="#带有其他标签的标签" class="headerlink" title="带有其他标签的标签"></a>带有其他标签的标签</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs <span class="title class_">Tags</span> %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">1.</span>**</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> <span class="title class_">One</span></span><br><span class="line"><span class="number">2.</span> <span class="title class_">Two</span></span><br><span class="line"><span class="number">3.</span> <span class="title class_">Three</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Indented</span> code <span class="attr">block</span>:</span><br><span class="line"></span><br><span class="line">    nano /etc</span><br><span class="line"></span><br><span class="line"><span class="title class_">Tagged</span> code <span class="attr">block</span>:</span><br><span class="line"></span><br><span class="line">&#123;% code %&#125;</span><br><span class="line">code tag</span><br><span class="line">code tag</span><br><span class="line">code tag</span><br><span class="line">&#123;% endcode %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note <span class="keyword">default</span> %&#125;</span><br><span class="line"><span class="title class_">Note</span> <span class="keyword">default</span> tag.</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">2.</span>**</span><br><span class="line"></span><br><span class="line">* <span class="title class_">Five</span></span><br><span class="line">* <span class="title class_">Six</span></span><br><span class="line">* <span class="title class_">Seven</span></span><br><span class="line"></span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">&#123;% youtube <span class="title class_">Kt7</span>u5kr_P5o %&#125;</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Tab</span> <span class="number">3.</span>**</span><br><span class="line"></span><br><span class="line">&#123;% subtabs <span class="title class_">Sub</span> <span class="title class_">Tabs</span> %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Sub</span> <span class="title class_">Tab</span> <span class="number">1.</span>**</span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line"><span class="title class_">Lorem</span> ipsum dolor sit amet, consectetuer adipiscing elit. <span class="title class_">Phasellus</span> hendrerit. <span class="title class_">Pellentesque</span> aliquet nibh nec urna. <span class="title class_">In</span> nisi neque, aliquet vel, dapibus id, mattis vel, nisi. <span class="title class_">Sed</span> pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. <span class="title class_">Nullam</span> mollis. <span class="title class_">Ut</span> justo. <span class="title class_">Suspendisse</span> potenti. <span class="title class_">Pellentesque</span> fermentum dolor. <span class="title class_">Aliquam</span> quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</span><br><span class="line"></span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line"><span class="title class_">Sed</span> egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. <span class="title class_">Morbi</span> purus libero, faucibus adipiscing, commodo quis, gravida id, est. <span class="title class_">Sed</span> lectus. <span class="title class_">Praesent</span> elementum hendrerit tortor. <span class="title class_">Sed</span> semper lorem at felis. <span class="title class_">Vestibulum</span> volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. <span class="title class_">Phasellus</span> pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Morbi</span> interdum mollis sapien. <span class="title class_">Sed</span> ac risus. <span class="title class_">Phasellus</span> lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. <span class="title class_">Sed</span> vel lacus. <span class="title class_">Mauris</span> nibh felis, adipiscing varius, adipiscing <span class="keyword">in</span>, lacinia vel, tellus. <span class="title class_">Suspendisse</span> ac urna. <span class="title class_">Etiam</span> pellentesque mauris ut lectus. <span class="title class_">Nunc</span> tellus ante, mattis eget, gravida vitae, ultricies ac, leo. <span class="title class_">Integer</span> leo pede, ornare a, lacinia eu, vulputate vel, nisl.</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Sub</span> <span class="title class_">Tab</span> <span class="number">2.</span>**</span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line"><span class="title class_">Lorem</span> ipsum dolor sit amet, consectetuer adipiscing elit. <span class="title class_">Phasellus</span> hendrerit. <span class="title class_">Pellentesque</span> aliquet nibh nec urna. <span class="title class_">In</span> nisi neque, aliquet vel, dapibus id, mattis vel, nisi. <span class="title class_">Sed</span> pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. <span class="title class_">Nullam</span> mollis. <span class="title class_">Ut</span> justo. <span class="title class_">Suspendisse</span> potenti. <span class="title class_">Pellentesque</span> fermentum dolor. <span class="title class_">Aliquam</span> quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</span><br><span class="line"></span><br><span class="line"><span class="title class_">Sed</span> egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. <span class="title class_">Morbi</span> purus libero, faucibus adipiscing, commodo quis, gravida id, est. <span class="title class_">Sed</span> lectus. <span class="title class_">Praesent</span> elementum hendrerit tortor. <span class="title class_">Sed</span> semper lorem at felis. <span class="title class_">Vestibulum</span> volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. <span class="title class_">Phasellus</span> pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</span><br><span class="line"></span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line"><span class="title class_">Morbi</span> interdum mollis sapien. <span class="title class_">Sed</span> ac risus. <span class="title class_">Phasellus</span> lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. <span class="title class_">Sed</span> vel lacus. <span class="title class_">Mauris</span> nibh felis, adipiscing varius, adipiscing <span class="keyword">in</span>, lacinia vel, tellus. <span class="title class_">Suspendisse</span> ac urna. <span class="title class_">Etiam</span> pellentesque mauris ut lectus. <span class="title class_">Nunc</span> tellus ante, mattis eget, gravida vitae, ultricies ac, leo. <span class="title class_">Integer</span> leo pede, ornare a, lacinia eu, vulputate vel, nisl.</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Sub</span> <span class="title class_">Tab</span> <span class="number">3.</span>**</span><br><span class="line"></span><br><span class="line">&#123;% subtabs <span class="title class_">Sub</span>-<span class="title class_">Sub</span> <span class="title class_">Tabs</span> %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Sub</span>-<span class="title class_">Sub</span> <span class="title class_">Tab</span> <span class="number">1</span> <span class="keyword">of</span> <span class="title class_">Sub</span> <span class="title class_">Tab</span> <span class="number">3.</span>**</span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line"><span class="title class_">Lorem</span> ipsum dolor sit amet, consectetuer adipiscing elit. <span class="title class_">Phasellus</span> hendrerit. <span class="title class_">Pellentesque</span> aliquet nibh nec urna. <span class="title class_">In</span> nisi neque, aliquet vel, dapibus id, mattis vel, nisi. <span class="title class_">Sed</span> pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. <span class="title class_">Nullam</span> mollis. <span class="title class_">Ut</span> justo. <span class="title class_">Suspendisse</span> potenti. <span class="title class_">Pellentesque</span> fermentum dolor. <span class="title class_">Aliquam</span> quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</span><br><span class="line"></span><br><span class="line"><span class="title class_">Sed</span> egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. <span class="title class_">Morbi</span> purus libero, faucibus adipiscing, commodo quis, gravida id, est. <span class="title class_">Sed</span> lectus. <span class="title class_">Praesent</span> elementum hendrerit tortor. <span class="title class_">Sed</span> semper lorem at felis. <span class="title class_">Vestibulum</span> volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. <span class="title class_">Phasellus</span> pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</span><br><span class="line"></span><br><span class="line"><span class="title class_">Morbi</span> interdum mollis sapien. <span class="title class_">Sed</span> ac risus. <span class="title class_">Phasellus</span> lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. <span class="title class_">Sed</span> vel lacus. <span class="title class_">Mauris</span> nibh felis, adipiscing varius, adipiscing <span class="keyword">in</span>, lacinia vel, tellus. <span class="title class_">Suspendisse</span> ac urna. <span class="title class_">Etiam</span> pellentesque mauris ut lectus. <span class="title class_">Nunc</span> tellus ante, mattis eget, gravida vitae, ultricies ac, leo. <span class="title class_">Integer</span> leo pede, ornare a, lacinia eu, vulputate vel, nisl.</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Sub</span>-<span class="title class_">Sub</span> <span class="title class_">Tab</span> <span class="number">2</span> <span class="keyword">of</span> <span class="title class_">Sub</span> <span class="title class_">Tab</span> <span class="number">3.</span>**</span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line"><span class="title class_">Lorem</span> ipsum dolor sit amet, consectetuer adipiscing elit. <span class="title class_">Phasellus</span> hendrerit. <span class="title class_">Pellentesque</span> aliquet nibh nec urna. <span class="title class_">In</span> nisi neque, aliquet vel, dapibus id, mattis vel, nisi. <span class="title class_">Sed</span> pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. <span class="title class_">Nullam</span> mollis. <span class="title class_">Ut</span> justo. <span class="title class_">Suspendisse</span> potenti. <span class="title class_">Pellentesque</span> fermentum dolor. <span class="title class_">Aliquam</span> quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</span><br><span class="line"></span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line"><span class="title class_">Sed</span> egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. <span class="title class_">Morbi</span> purus libero, faucibus adipiscing, commodo quis, gravida id, est. <span class="title class_">Sed</span> lectus. <span class="title class_">Praesent</span> elementum hendrerit tortor. <span class="title class_">Sed</span> semper lorem at felis. <span class="title class_">Vestibulum</span> volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. <span class="title class_">Phasellus</span> pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</span><br><span class="line"></span><br><span class="line"><span class="title class_">Morbi</span> interdum mollis sapien. <span class="title class_">Sed</span> ac risus. <span class="title class_">Phasellus</span> lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. <span class="title class_">Sed</span> vel lacus. <span class="title class_">Mauris</span> nibh felis, adipiscing varius, adipiscing <span class="keyword">in</span>, lacinia vel, tellus. <span class="title class_">Suspendisse</span> ac urna. <span class="title class_">Etiam</span> pellentesque mauris ut lectus. <span class="title class_">Nunc</span> tellus ante, mattis eget, gravida vitae, ultricies ac, leo. <span class="title class_">Integer</span> leo pede, ornare a, lacinia eu, vulputate vel, nisl.</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**<span class="title class_">This</span> is <span class="title class_">Sub</span>-<span class="title class_">Sub</span> <span class="title class_">Tab</span> <span class="number">3</span> <span class="keyword">of</span> <span class="title class_">Sub</span> <span class="title class_">Tab</span> <span class="number">3.</span>**</span><br><span class="line"></span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line"><span class="title class_">Lorem</span> ipsum dolor sit amet, consectetuer adipiscing elit. <span class="title class_">Phasellus</span> hendrerit. <span class="title class_">Pellentesque</span> aliquet nibh nec urna. <span class="title class_">In</span> nisi neque, aliquet vel, dapibus id, mattis vel, nisi. <span class="title class_">Sed</span> pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. <span class="title class_">Nullam</span> mollis. <span class="title class_">Ut</span> justo. <span class="title class_">Suspendisse</span> potenti. <span class="title class_">Pellentesque</span> fermentum dolor. <span class="title class_">Aliquam</span> quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</span><br><span class="line"></span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line"><span class="title class_">Sed</span> egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. <span class="title class_">Morbi</span> purus libero, faucibus adipiscing, commodo quis, gravida id, est. <span class="title class_">Sed</span> lectus. <span class="title class_">Praesent</span> elementum hendrerit tortor. <span class="title class_">Sed</span> semper lorem at felis. <span class="title class_">Vestibulum</span> volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. <span class="title class_">Phasellus</span> pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</span><br><span class="line"></span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line"><span class="title class_">Morbi</span> interdum mollis sapien. <span class="title class_">Sed</span> ac risus. <span class="title class_">Phasellus</span> lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. <span class="title class_">Sed</span> vel lacus. <span class="title class_">Mauris</span> nibh felis, adipiscing varius, adipiscing <span class="keyword">in</span>, lacinia vel, tellus. <span class="title class_">Suspendisse</span> ac urna. <span class="title class_">Etiam</span> pellentesque mauris ut lectus. <span class="title class_">Nunc</span> tellus ante, mattis eget, gravida vitae, ultricies ac, leo. <span class="title class_">Integer</span> leo pede, ornare a, lacinia eu, vulputate vel, nisl.</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endsubtabs %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endsubtabs %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<div class="tabs" id="tags"><ul class="nav-tabs"><li class="tab active"><a href="#tags-1">Tags 1</a></li><li class="tab"><a href="#tags-2">Tags 2</a></li><li class="tab"><a href="#tags-3">Tags 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tags-1"><p><strong>This is Tab 1.</strong></p>
+<ol>
+<li>One</li>
+<li>Two</li>
+<li>Three</li>
+</ol>
+<p>Indented code block:</p>
+<pre><code>nano /etc
+</code></pre>
+<p>Tagged code block:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">code tag</span><br><span class="line">code tag</span><br><span class="line">code tag</span><br></pre></td></tr></table></figure>
+
+<div class="note default"><p>Note default tag.</p>
+</div></div><div class="tab-pane" id="tags-2"><p><strong>This is Tab 2.</strong></p>
+<ul>
+<li>Five</li>
+<li>Six</li>
+<li>Seven</li>
+</ul>
+<div class="note primary"><div class="video-container"><iframe src="https://www.youtube.com/embed/Kt7u5kr_P5o" frameborder="0" loading="lazy" allowfullscreen></iframe></div></div></div><div class="tab-pane" id="tags-3"><p><strong>This is Tab 3.</strong></p>
+<div class="tabs" id="sub-tabs"><ul class="nav-tabs"><li class="tab active"><a href="#sub-tabs-1">Sub Tabs 1</a></li><li class="tab"><a href="#sub-tabs-2">Sub Tabs 2</a></li><li class="tab"><a href="#sub-tabs-3">Sub Tabs 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="sub-tabs-1"><p><strong>This is Sub Tab 1.</strong></p>
+<div class="note success"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
+<div class="note warning"><p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
+</div>
+
+<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+</div></div><div class="tab-pane" id="sub-tabs-2"><p><strong>This is Sub Tab 2.</strong></p>
+<div class="note success"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
+<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
+<div class="note danger"><p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+</div></div></div><div class="tab-pane" id="sub-tabs-3"><p><strong>This is Sub Tab 3.</strong></p>
+<div class="tabs" id="sub-sub-tabs"><ul class="nav-tabs"><li class="tab active"><a href="#sub-sub-tabs-1">Sub-Sub Tabs 1</a></li><li class="tab"><a href="#sub-sub-tabs-2">Sub-Sub Tabs 2</a></li><li class="tab"><a href="#sub-sub-tabs-3">Sub-Sub Tabs 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="sub-sub-tabs-1"><p><strong>This is Sub-Sub Tab 1 of Sub Tab 3.</strong></p>
+<div class="note success"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
+<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
+<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+</div></div><div class="tab-pane" id="sub-sub-tabs-2"><p><strong>This is Sub-Sub Tab 2 of Sub Tab 3.</strong></p>
+<div class="note success"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
+<div class="note warning"><p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
+<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+</div>
+</div></div><div class="tab-pane" id="sub-sub-tabs-3"><p><strong>This is Sub-Sub Tab 3 of Sub Tab 3.</strong></p>
+<div class="note success"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
+<div class="note warning"><p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
+<div class="note danger"><p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+</div>
+</div>
+</div></div></div></div></div></div></div></div></div></div>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/reward/wechatpay.png" alt="GeoScienceLab 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/" rel="tag"><i class="fa fa-tag"></i> 技术文档</a>
+              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+              <a href="/tags/NexT/" rel="tag"><i class="fa fa-tag"></i> NexT</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/03/31/zhong-guo-sen-lin-sheng-tai-xi-tong-bu-tong-shi-jian-chi-du-tu-rang-hu-xi-shu-ju-ku/" rel="next" title="科研数据|中国森林生态系统不同时间尺度土壤呼吸数据库(2000-2018)">
+                  科研数据|中国森林生态系统不同时间尺度土壤呼吸数据库(2000-2018) <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81ODI4MS8zNDc0NA=="></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Smith</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">7k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">24 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<script src="/js/third-party/comments/livere.js"></script>
+
+</body>
+</html>
