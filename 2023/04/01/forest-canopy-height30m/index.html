@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#708090"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+  <link rel="mask-icon" href="/images/logo.png" color="#708090">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jayking-john.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"livere","storage":true,"lazyload":false,"nav":null,"activeClass":"livere"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="借助140平方公里的无人机激光雷达数据训练了深度学习指导的空间内插模型，内插GEDI与ICESat-2 ATLAS星载激光雷达脚点数据，成功绘制了全国30米分辨率的森林冠层高度产品">
+<meta property="og:type" content="article">
+<meta property="og:title" content="30米空间分辨率全国森林冠层高度分布产品">
+<meta property="og:url" content="https://jayking-john.github.io/2023/04/01/forest-canopy-height30m/index.html">
+<meta property="og:site_name" content="GeoScienceLab">
+<meta property="og:description" content="借助140平方公里的无人机激光雷达数据训练了深度学习指导的空间内插模型，内插GEDI与ICESat-2 ATLAS星载激光雷达脚点数据，成功绘制了全国30米分辨率的森林冠层高度产品">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2023/04/01/ppWA85d.jpg">
+<meta property="article:published_time" content="2023-04-01T03:47:20.000Z">
+<meta property="article:modified_time" content="2023-04-01T06:22:00.499Z">
+<meta property="article:author" content="GeoScienceLab">
+<meta property="article:tag" content="数据">
+<meta property="article:tag" content="空间数据">
+<meta property="article:tag" content="森林冠层高度">
+<meta property="article:tag" content="forest canopy height">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2023/04/01/ppWA85d.jpg">
+
+
+<link rel="canonical" href="https://jayking-john.github.io/2023/04/01/forest-canopy-height30m/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jayking-john.github.io/2023/04/01/forest-canopy-height30m/","path":"2023/04/01/forest-canopy-height30m/","title":"30米空间分辨率全国森林冠层高度分布产品"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>30米空间分辨率全国森林冠层高度分布产品 | GeoScienceLab</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">GeoScienceLab</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">地理科学实验室</p>
+      <img class="custom-logo-image" src="/images/logo4.png" alt="GeoScienceLab">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-技术文档"><a href="/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/" rel="section"><i class="fa fa-tools fa-fw"></i>技术文档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D"><span class="nav-number">2.</span> <span class="nav-text">关键词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E4%BF%A1%E6%81%AF"><span class="nav-number">3.</span> <span class="nav-text">数据集信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BC%95%E7%94%A8"><span class="nav-number">4.</span> <span class="nav-text">数据引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E4%BD%BF%E7%94%A8%E6%9D%A1%E6%AC%BE"><span class="nav-number">5.</span> <span class="nav-text">数据使用条款</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="GeoScienceLab"
+      src="/images/logo.png">
+  <p class="site-author-name" itemprop="name">GeoScienceLab</p>
+  <div class="site-description" itemprop="description">遥感, 地信, Remote Sensing, GIS, Spatiotemporal Data, Technology</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:jayking-john@gmail.com" title="E-Mail → mailto:jayking-john@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/jayking-john" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jayking-john" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1272792144&website=www.oicqzone.com" title="QQ → tencent:&#x2F;&#x2F;AddContact&#x2F;?fromId&#x3D;45&amp;fromSubId&#x3D;1&amp;subcmd&#x3D;all&amp;uin&#x3D;1272792144&amp;website&#x3D;www.oicqzone.com" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.researchgate.net/profile/Huiwen-Li-2" title="ResearchG → https:&#x2F;&#x2F;www.researchgate.net&#x2F;profile&#x2F;Huiwen-Li-2" rel="noopener me" target="_blank"><i class="fab fa-researchgate fa-fw"></i>ResearchG</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://google.com/" title="https:&#x2F;&#x2F;google.com" rel="noopener" target="_blank">Google</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://baidu.com/" title="https:&#x2F;&#x2F;baidu.com" rel="noopener" target="_blank">Baidu</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2023/03/31/zhong-guo-sen-lin-sheng-tai-xi-tong-bu-tong-shi-jian-chi-du-tu-rang-hu-xi-shu-ju-ku/" rel="bookmark">
+        <time class="popular-posts-time">2023-03-31</time>
+        <br>
+      科研数据 | 中国森林生态系统不同时间尺度土壤呼吸数据库(2000-2018)
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    
+    <div class="post-gallery-image">
+      <img src="https://s1.ax1x.com/2023/04/01/ppWA85d.jpg" itemprop="contentUrl">
+    </div>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jayking-john.github.io/2023/04/01/forest-canopy-height30m/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="GeoScienceLab">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GeoScienceLab">
+      <meta itemprop="description" content="遥感, 地信, Remote Sensing, GIS, Spatiotemporal Data, Technology">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="30米空间分辨率全国森林冠层高度分布产品 | GeoScienceLab">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          30米空间分辨率全国森林冠层高度分布产品
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-04-01 11:47:20 / 修改时间：14:22:00" itemprop="dateCreated datePublished" datetime="2023-04-01T11:47:20+08:00">2023-04-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E8%B5%84%E6%BA%90/" itemprop="url" rel="index"><span itemprop="name">数据资源</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E8%B5%84%E6%BA%90/%E6%A0%BC%E7%BD%91%E6%95%B0%E6%8D%AE/" itemprop="url" rel="index"><span itemprop="name">格网数据</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E8%B5%84%E6%BA%90/%E6%A0%BC%E7%BD%91%E6%95%B0%E6%8D%AE/%E6%A4%8D%E8%A2%AB%E5%8F%82%E6%95%B0/" itemprop="url" rel="index"><span itemprop="name">植被参数</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <blockquote class="blockquote-center">
+<p><font size=4.5><em>借助140平方公里的无人机激光雷达数据训练了深度学习指导的空间内插模型，内插GEDI与ICESat-2 ATLAS星载激光雷达脚点数据，成功绘制了全国30米分辨率的森林冠层高度产品</em></font></p>
+
+</blockquote>
+<span id="more"></span>
+
+<blockquote>
+<p>刘小强，苏艳军，胡天宇，方精云，唐志尧，唐昊，郭庆华(中国科学院植物研究所，北京大学，新加坡国立大学)发布时间：2021&#x2F;12&#x2F;16 9:12:46</p>
+</blockquote>
+<div class="note "><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3></div>
+
+<p>国家与全球尺度的高分辨率森林冠层高度产品对估算森林碳储存、理解森林生态系统过程、以及制定森林经营政策等至关重要。目前，现有的森林冠层高度产品的空间分辨率一般是500米或1000米，难以满足应用需求。新近发射的星载激光雷达传感器GEDI与ICESat-2 ATLAS可以获取全球范围内分米级空间分辨率的森林冠层高度脚点数据，为大尺度森林冠层高度的高分辨率绘制提供了可能。但是星载激光雷达获取的脚点数据是沿卫星轨道离散分布的，无法直接生成空间连续的森林冠层高度产品。以往的研究通常利用星载激光雷达脚点数据与遥感影像和环境因子建立回归模型生成空间连续的大尺度森林冠层高度产品，该方法难以充分利用GEDI与ICESat-2 ATLAS较为密集的脚点数据，并且容易受到遥感影像饱和效应的影响。本产品采用了一种深度学习指导的空间内插模型，利用深度神经网络自动学习权重的能力，解决了如何在内插模型中均衡考虑空间、环境与光谱等特征距离的权重贡献，突破了常用内插模型仅使用空间距离的局限。借助140平方公里的无人机激光雷达数据训练了该空间内插模型，内插GEDI与ICESat-2 ATLAS星载激光雷达脚点数据，成功绘制了全国30米分辨率的森林冠层高度产品。通过与三套独立的验证数据集（超过100万个的GEDI 脚点数据、33平方千米的无人机激光雷达数据和近6万条的森林清查数据）相比，这套全国森林冠层高度产品的精度较高（R2≥0.55，RMSE≤5.5 m），受益于空间内插策略，本产品在森林冠层较高的地区几乎没有出现饱和。这套高精度、高空间分辨率的全国森林冠层高度产品有助于提升大尺度森林生物量估算的准确性，为制定气候减缓政策与实现“碳中和”目标提供数据支持。</p>
+<p>Spatially continuous estimates of forest canopy height at national to global scales are critical for quantifying forest carbon storage, understanding forest ecosystem processes, and developing forest management and restoration policies to mitigate global climate change. Spaceborne light detection and ranging (lidar) platforms, especially the Global Ecosystem Dynamics Investigation (GEDI) and Ice, Cloud, and land Elevation Satellite-2 (ICESat-2) Advanced Topographic Laser Altimeter System (ATLAS), can measure forest canopy height in discrete footprints globally. Their coverage provides a promising data source for national to global-scale forest canopy height estimates. However, previous studies usually used a regression-based approach to develop spatially continuous forest canopy height distribution through the aid of optical images, which cannot take full advantage of the dense spaceborne lidar footprints and may still suffer from the saturation effect of optical images. We developed a novel neural network guided interpolation (NNGI) method to map China’s forest canopy height by fusing GEDI, ICESat-2 ATLAS, and Sentinel-2 images. We evaluated the interpolated forest canopy height product of China by over 1,100,000 GEDI validation footprints (R2&#x3D;0.55, RMSE&#x3D;5.32 m), about 33 km2 drone-lidar validation data (R2&#x3D;0.58, RMSE&#x3D;4.93 m), and over 59,000 field plot measurements (R2&#x3D;0.60, RMSE&#x3D;4.88 m). Benefiting from the interpolation-based mapping strategy, the resulting product had almost no saturation effect in areas with tall forest canopies. The interpolated forest canopy height with high mapping accuracy and high spatial resolution is likely beneficial for improving the accuracy of forest biomass mapping and informing climate mitigation policy initiatives to achieve China’s goal of carbon neutrality.</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppWA85d"><img src="https://s1.ax1x.com/2023/04/01/ppWA85d.md.jpg" alt="ppWA85d.jpg" border="0" /></a></p>
+<div class="note "><h3 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h3></div>
+
+<p>森林冠层高度，无人机激光雷达，星载激光雷达，遥感影像</p>
+<div class="note "><h3 id="数据集信息"><a href="#数据集信息" class="headerlink" title="数据集信息"></a>数据集信息</h3></div>
+
+<table>
+<thead>
+<tr>
+<th align="left"><img width=100/><center>信息</center></th>
+<th align="left"><img width=100/><center>内容</center></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">记录数:</td>
+<td align="left">5条</td>
+</tr>
+<tr>
+<td align="left">数据量:</td>
+<td align="left">5.01 GB</td>
+</tr>
+<tr>
+<td align="left">项目资助:</td>
+<td align="left">中国科学院战略性科技先导专项（A类）（XDA19050401）与国家自然科学基金面上项目（41871332, 31971575, 41901358）</td>
+</tr>
+<tr>
+<td align="left">共享方式:</td>
+<td align="left">全部共享（数据保护期外，提供全部数据和媒体下载）</td>
+</tr>
+<tr>
+<td align="left">开放日期:</td>
+<td align="left">2021&#x2F;12&#x2F;13</td>
+</tr>
+<tr>
+<td align="left">使用许可:</td>
+<td align="left">署名-非商业性使用-禁止演绎 CC 4.0 国际版 (CC BY-NC-ND 4.0)</td>
+</tr>
+<tr>
+<td align="left">使用方法:</td>
+<td align="left">详见README.docx <a target="_blank" rel="noopener" href="http://www.3decology.org/chinatreeheight/">http://www.3decology.org/chinatreeheight/</a></td>
+</tr>
+</tbody></table>
+<div class="note "><h3 id="数据引用"><a href="#数据引用" class="headerlink" title="数据引用"></a>数据引用</h3></div>
+
+<table>
+<thead>
+<tr>
+<th align="left"><img width=100/><center>信息</center></th>
+<th align="left"><img width=100/><center>内容</center></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">必引文献:</td>
+<td align="left">Liu, X., Su, Y., Hu, T. et al. 2021. Neural network guided interpolation for mapping canopy height of China’s forests by integrating GEDI and ICESat-2 data. Remote Sens. Environ. <a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.rse.2021.112844">https://doi.org/10.1016/j.rse.2021.112844</a>.</td>
+</tr>
+<tr>
+<td align="left">数据引用:</td>
+<td align="left">数据来源于：30米空间分辨率全国森林冠层高度分布产品,刘小强，苏艳军，胡天宇，方精云，唐志尧，唐昊，郭庆华(中国科学院植物研究所，北京大学，新加坡国立大学), 2021, 中国科学院植物科学数据中心, CSTR:34735.11.PLANTDATA.0066 <br/> Normative references：The forest canopy height distribution of China at 30 m resolution, 2021, Plant Data Center of Chinese Academy of Sciences, CSTR:34735.11.PLANTDATA.0066</td>
+</tr>
+</tbody></table>
+<div class="note "><h3 id="数据使用条款"><a href="#数据使用条款" class="headerlink" title="数据使用条款"></a>数据使用条款</h3></div>
+
+<div class="note "> <font size=2>
+为尊重知识产权、保障数据作者的权益、扩展数据中心的服务、评估数据的应用潜力，请数据使用者在使用数据所产生的研究成果中（包括公开发表的论文、论著、数据产品和未公开发表的研究报告、数据产品等成果），明确注明数据来源和数据作者。对于转载（二次或多次发布）的数据，作者还须注明原始数据来源。
+<br/>中文致谢方式：<br/>
+　　感谢中国科学院植物科学数据中心(Plant Data Center of Chinese Academy of Sciences, https://www.plantplus.cn) 提供数据支撑。
+<br/>To respect the intellectual property rights, protect the rights of data authors, expand services of the data center, and evaluate the application potential of data, data users should clearly indicate the source of the data and the author of the data in the research results generated by using the data (including published papers, articles, data products, and unpublished research reports, data products and other results). For re-posting (second or multiple releases) data, the author must also indicate the source of the original data.
+<br/>Acknowledgements：<br/>
+　　Acknowledgement for the data support from Plant Data Center of Chinese Academy of Sciences (https://www.plantplus.cn).
+</font></div>
+
+<table>
+<thead>
+<tr>
+<th align="left">数据提供机构</center></th>
+<th align="left"><img width=100/><center>中国科学院植物研究所，北京大学，新加坡国立大学</center></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">数据提供者：</td>
+<td align="left">刘小强，苏艳军，胡天宇，方精云，唐志尧，唐昊，郭庆华</td>
+</tr>
+<tr>
+<td align="left">联系人：</td>
+<td align="left">刘小强</td>
+</tr>
+<tr>
+<td align="left">联系电话：</td>
+<td align="left">18518602018</td>
+</tr>
+<tr>
+<td align="left">电子邮箱：</td>
+<td align="left"><a href="mailto:&#x6c;&#x69;&#117;&#x78;&#x69;&#97;&#111;&#113;&#x69;&#x61;&#x6e;&#x67;&#64;&#105;&#x62;&#99;&#x61;&#x73;&#x2e;&#97;&#99;&#46;&#99;&#x6e;">&#x6c;&#x69;&#117;&#x78;&#x69;&#97;&#111;&#113;&#x69;&#x61;&#x6e;&#x67;&#64;&#105;&#x62;&#99;&#x61;&#x73;&#x2e;&#97;&#99;&#46;&#99;&#x6e;</a></td>
+</tr>
+</tbody></table>
+<div class="note info"><p>数据原始发布平台：<a target="_blank" rel="noopener" href="https://www.plantplus.cn/cn/dataset/3EB5137DA344A951">中国科学院植物科学数据中心</a></p>
+</div>
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/reward/wechatpay.png" alt="GeoScienceLab 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E6%8D%AE/" rel="tag"><i class="fa fa-tag"></i> 数据</a>
+              <a href="/tags/%E7%A9%BA%E9%97%B4%E6%95%B0%E6%8D%AE/" rel="tag"><i class="fa fa-tag"></i> 空间数据</a>
+              <a href="/tags/%E6%A3%AE%E6%9E%97%E5%86%A0%E5%B1%82%E9%AB%98%E5%BA%A6/" rel="tag"><i class="fa fa-tag"></i> 森林冠层高度</a>
+              <a href="/tags/forest-canopy-height/" rel="tag"><i class="fa fa-tag"></i> forest canopy height</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/04/01/image-web-save/" rel="next" title="博客技术 | 利用网络图床存储博文的图片">
+                  博客技术 | 利用网络图床存储博文的图片 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81ODI4MS8zNDc0NA=="></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Smith</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">9k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">32 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<script src="/js/third-party/comments/livere.js"></script>
+
+</body>
+</html>
