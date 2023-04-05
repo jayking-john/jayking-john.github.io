@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>sublime中添加Markdown编辑功能以及实现实时预览功能</title>
+      <link href="/2023/04/05/markdown-in-sublime/"/>
+      <url>/2023/04/05/markdown-in-sublime/</url>
+      
+        <content type="html"><![CDATA[<blockquote class="blockquote-center"><p><font size=4.5><em>sublime中添加Markdown编辑功能以及实现实时预览功能</em></font></p></blockquote><span id="more"></span><h2 id="sublime中添加Markdown编辑功能以及实现实时预览功能"><a href="#sublime中添加Markdown编辑功能以及实现实时预览功能" class="headerlink" title="sublime中添加Markdown编辑功能以及实现实时预览功能"></a>sublime中添加Markdown编辑功能以及实现实时预览功能</h2><h3 id="安装及设置步骤"><a href="#安装及设置步骤" class="headerlink" title="安装及设置步骤"></a>安装及设置步骤</h3><ol><li>ctrl+shift+p, 然后输入install packages</li><li>然后输入markdownediting 安装markdown编辑器</li><li>重复上述步骤，输入markdownlivepreview 安装实时预览插件</li><li>设置快捷键，添加下述快捷键</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;keys&quot;: [&quot;alt+m&quot;],</span><br><span class="line">    &quot;command&quot;: &quot;open_markdown_preview&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>新建md文件后，右下角视图更换为markdown，然后alt+m实现实时预览</p><img src="https://s1.ax1x.com/2023/04/05/ppIiElR.png"><img src="https://s1.ax1x.com/2023/04/05/ppIiV61.png">]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术文档 </category>
+          
+          <category> 博客技术 </category>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术文档 </tag>
+            
+            <tag> Markdown </tag>
+            
+            <tag> sublime </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>科研数据 | 30米空间分辨率全国森林冠层高度分布产品</title>
       <link href="/2023/04/01/forest-canopy-height30m/"/>
       <url>/2023/04/01/forest-canopy-height30m/</url>
