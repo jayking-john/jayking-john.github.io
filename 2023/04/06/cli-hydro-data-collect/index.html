@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#708090"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+  <link rel="mask-icon" href="/images/logo.png" color="#708090">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jayking-john.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"livere","storage":true,"lazyload":false,"nav":null,"activeClass":"livere"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="气象水文数据大汇总">
+<meta property="og:type" content="article">
+<meta property="og:title" content="科研数据 | 降水、气温、径流、干旱指数、地图shp、水文模型等气象水文数据">
+<meta property="og:url" content="https://jayking-john.github.io/2023/04/06/cli-hydro-data-collect/index.html">
+<meta property="og:site_name" content="GeoScienceLab">
+<meta property="og:description" content="气象水文数据大汇总">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2023/04/06/ppTSLqK.png">
+<meta property="article:published_time" content="2023-04-06T15:02:33.000Z">
+<meta property="article:modified_time" content="2023-04-06T15:31:45.698Z">
+<meta property="article:author" content="GeoScienceLab">
+<meta property="article:tag" content="数据">
+<meta property="article:tag" content="降水">
+<meta property="article:tag" content="气温">
+<meta property="article:tag" content="径流">
+<meta property="article:tag" content="干旱指数">
+<meta property="article:tag" content="地图shp">
+<meta property="article:tag" content="水文模型">
+<meta property="article:tag" content="气象">
+<meta property="article:tag" content="水文">
+<meta property="article:tag" content="气象水文">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2023/04/06/ppTSLqK.png">
+
+
+<link rel="canonical" href="https://jayking-john.github.io/2023/04/06/cli-hydro-data-collect/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jayking-john.github.io/2023/04/06/cli-hydro-data-collect/","path":"2023/04/06/cli-hydro-data-collect/","title":"科研数据 | 降水、气温、径流、干旱指数、地图shp、水文模型等气象水文数据"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>科研数据 | 降水、气温、径流、干旱指数、地图shp、水文模型等气象水文数据 | GeoScienceLab</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">GeoScienceLab</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">地理科学实验室</p>
+      <img class="custom-logo-image" src="/images/logo4.png" alt="GeoScienceLab">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-技术文档"><a href="/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/" rel="section"><i class="fa fa-tools fa-fw"></i>技术文档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%B0%94%E6%B8%A9%E3%80%81%E9%99%8D%E6%B0%B4%E3%80%81%E5%BE%84%E6%B5%81%E7%AD%89%E6%95%B0%E6%8D%AE"><span class="nav-number">1.</span> <span class="nav-text">一、气温、降水、径流等数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%9C%B0%E7%90%86%E6%95%B0%E6%8D%AE"><span class="nav-number">2.</span> <span class="nav-text">二、地理数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%9C%B0%E5%9B%BE%E6%95%B0%E6%8D%AE"><span class="nav-number">3.</span> <span class="nav-text">三、地图数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%B0%B4%E6%96%87%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">四、水文模型</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="GeoScienceLab"
+      src="/images/logo.png">
+  <p class="site-author-name" itemprop="name">GeoScienceLab</p>
+  <div class="site-description" itemprop="description">遥感, 地信, Remote Sensing, GIS, Spatiotemporal Data, Technology</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:jayking-john@gmail.com" title="E-Mail → mailto:jayking-john@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/jayking-john" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jayking-john" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1272792144&website=www.oicqzone.com" title="QQ → tencent:&#x2F;&#x2F;AddContact&#x2F;?fromId&#x3D;45&amp;fromSubId&#x3D;1&amp;subcmd&#x3D;all&amp;uin&#x3D;1272792144&amp;website&#x3D;www.oicqzone.com" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.researchgate.net/profile/Huiwen-Li-2" title="ResearchG → https:&#x2F;&#x2F;www.researchgate.net&#x2F;profile&#x2F;Huiwen-Li-2" rel="noopener me" target="_blank"><i class="fab fa-researchgate fa-fw"></i>ResearchG</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://google.com/" title="https:&#x2F;&#x2F;google.com" rel="noopener" target="_blank">Google</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://baidu.com/" title="https:&#x2F;&#x2F;baidu.com" rel="noopener" target="_blank">Baidu</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    
+    <div class="post-gallery-image">
+      <img src="https://s1.ax1x.com/2023/04/06/ppTSLqK.png" itemprop="contentUrl">
+    </div>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jayking-john.github.io/2023/04/06/cli-hydro-data-collect/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="GeoScienceLab">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GeoScienceLab">
+      <meta itemprop="description" content="遥感, 地信, Remote Sensing, GIS, Spatiotemporal Data, Technology">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="科研数据 | 降水、气温、径流、干旱指数、地图shp、水文模型等气象水文数据 | GeoScienceLab">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          科研数据 | 降水、气温、径流、干旱指数、地图shp、水文模型等气象水文数据
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-04-06 23:02:33 / 修改时间：23:31:45" itemprop="dateCreated datePublished" datetime="2023-04-06T23:02:33+08:00">2023-04-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E8%B5%84%E6%BA%90/" itemprop="url" rel="index"><span itemprop="name">数据资源</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E6%8D%AE%E8%B5%84%E6%BA%90/%E6%95%B0%E6%8D%AE%E9%9B%86%E6%88%90/" itemprop="url" rel="index"><span itemprop="name">数据集成</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <blockquote class="blockquote-center">
+<p><font size=4.5><em>气象水文数据大汇总</em></font></p>
+
+</blockquote>
+<span id="more"></span>
+
+<h2 id="一、气温、降水、径流等数据"><a href="#一、气温、降水、径流等数据" class="headerlink" title="一、气温、降水、径流等数据"></a>一、气温、降水、径流等数据</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247496120&idx=1&sn=9bc87f204a5728adfd58a56f9bf868e7&scene=21#wechat_redirect">《1979~2018年中国近地表日气温数据集》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247495971&idx=1&sn=da531c79467ac5cde11b927bacbcb91e&scene=21#wechat_redirect">《1960-2020年中国1公里分辨率月降水量数据集》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247495970&idx=1&sn=bd2ebf3943b323c0a6125e7f274a9c2c&scene=21#wechat_redirect">《1961-2019年中国(1天,1公里)气温和降水数据集》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247495105&idx=1&sn=19b0a211582a8aa4595b50c7f511b501&scene=21#wechat_redirect">《1961-2018年中国天然径流量格点数据集》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247493898&idx=1&sn=0c0185f92b6ca75eee57460c7ae67b7c&scene=21#wechat_redirect">《1901-2020年中国1km分辨率逐月平均气温、降水量数据集》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247491710&idx=1&sn=7000cd88b4b8b2604a4d62fcc37b142c&scene=21#wechat_redirect">《1942-2021年NOAA中国气象数据集》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247490306&idx=1&sn=9c01679dfa7bb9611f8f9dd5671e0daf&scene=21#wechat_redirect">《欧洲气候评估中心重建的Palmer干湿指数(scPDSI)》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247490236&idx=1&sn=2ddac163a933f04dc949fac0e3fe1027&scene=21#wechat_redirect">《西班牙国家研究委员会（CSIC）SPEI数据集》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487064&idx=1&sn=827df37802e89ed3deca1349b8fac2a0&scene=21#wechat_redirect">《1979~2018年中国区域地面气象要素驱动数据集》</a></li>
+</ol>
+<h2 id="二、地理数据"><a href="#二、地理数据" class="headerlink" title="二、地理数据"></a>二、地理数据</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247495215&idx=1&sn=65c349b4b4df7e55e32aba06098649a6&scene=21#wechat_redirect">《中国12.5米，30米，90米，250米，500米，1000米DEM地形数据》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247491581&idx=1&sn=812f56675cb913cd5a795477c197a1ba&scene=21#wechat_redirect">《1980~2020年中国区域30米和1000米土地利用数据》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247488120&idx=1&sn=d830858f7b86d1f32165b3eb76604e63&scene=21#wechat_redirect">《2000、2010及2020年中国global30土地利用数据》</a></li>
+</ol>
+<h2 id="三、地图数据"><a href="#三、地图数据" class="headerlink" title="三、地图数据"></a>三、地图数据</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247495776&idx=1&sn=4bf8a203bc09c118498b0e5adf28068a&scene=21#wechat_redirect">《1949~2023年共计75年中国省市县行政区划shp》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247495763&idx=1&sn=a0d2db923d53382ac52cb204271f617a&scene=21#wechat_redirect">《中国七大地理分区shp》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247493782&idx=1&sn=340520edd4006e1736fcde8e0f36cd01&scene=21#wechat_redirect">《中国区域1~5级水系、湖泊矢量图》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247493311&idx=1&sn=071e24cf04e70e95bd7a92eb9dbea514&scene=21#wechat_redirect">《中国区域1~3级流域矢量图、1~5级水系矢量图》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247491671&idx=1&sn=feba1ffd7894c95fae65b448ac732d83&scene=21#wechat_redirect">《2021年7月中国乡镇地图shp》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247489474&idx=1&sn=9fcf721775a877a4b3330eb8a00953fd&scene=21#wechat_redirect">《全球水文、自然气候和地貌子分类矢量数据》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247489284&idx=1&sn=7ac5c7170bfb248081a17639dd0a99e5&scene=21#wechat_redirect">《全球七大洲边界地图shp》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247489276&idx=1&sn=a474f80a8332646432559b1d1dea5c2d&scene=21#wechat_redirect">《中国领土完整的世界地图shp》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247488201&idx=1&sn=b64686dfa7f8c8951e72d53d66e4249e&scene=21#wechat_redirect">《三江源区shp》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247488177&idx=1&sn=c804248fa30382b081d04a693e59690e&scene=21#wechat_redirect">《青藏高原shp》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247488164&idx=1&sn=dcf87f91556080ed41da1ff23b3ef129&scene=21#wechat_redirect">《秦岭淮河区域shp》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247488148&idx=1&sn=b65c4d8ae4c47a934a784626da935f1f&scene=21#wechat_redirect">《秦岭+秦巴边界shp》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487954&idx=1&sn=7d7434a971a35e03f5ab5cc1f22f03b4&scene=21#wechat_redirect">《中国八大气候分区shp》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487744&idx=1&sn=389f7a2f03a05223cbda3bd054f9ea66&scene=21#wechat_redirect">《2019+2020+2021年中国省、市、县行政边界shp、json、geojson矢量数据》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487735&idx=1&sn=39f227b9258349e52656ca0023660e7f&scene=21#wechat_redirect">《石羊河流域shp、DEM及水系矢量图》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487487&idx=1&sn=af1a6e63536fc089add0be6c879c9390&scene=21#wechat_redirect">《气象水文地图shp分享AA制（1）》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487045&idx=2&sn=e6d2fd1b62304ffa3b058d5ff56274c2&scene=21#wechat_redirect">《全国省、市、县级底图及各省白化Surfer底图》</a></li>
+</ol>
+<h2 id="四、水文模型"><a href="#四、水文模型" class="headerlink" title="四、水文模型"></a>四、水文模型</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247486232&idx=1&sn=2a07a40eed0c16e0e4ae14d369abc9b7&scene=21#wechat_redirect">《水文模型—Matlab版本（1）》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247489470&idx=1&sn=987bac8ff0884299a43ebb7ea5e3bc38&scene=21#wechat_redirect">《R语言SWAT水文模型（2）》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487300&idx=1&sn=9f37f9c4cb49b028a6b82e8063f17273&scene=21#wechat_redirect">《Matlab水文模型(3)—连续降雨径流水文模型》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487307&idx=1&sn=eb1cd21172c7de4840da8da9685bad40&scene=21#wechat_redirect">《Matlab水文模型(4)—月水量平衡水文模型》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=1&sn=7852a05769dc0e771886ad24028f6546&scene=21#wechat_redirect">《Matlab水文模型(5)—HBV水文模型》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=2&sn=c9206e0b60c6c455800dc5830c5d13e0&scene=21#wechat_redirect">《Matlab水文模型(6)—非平稳概念性降雨径流工具箱》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=3&sn=cb6371369b1a349ff101282ef4c2a5bd&scene=21#wechat_redirect">《Matlab水文模型(7)—水文预报日模型、次洪模型》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=4&sn=94af5b89199654fe86feabbc673005da&scene=21#wechat_redirect">《Matlab水文模型(8)—半分布式冰川水文模型》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=5&sn=911932b945a01b90316ce838863d2a54&scene=21#wechat_redirect">《Matlab水文模型(9)—生态水文响应模型》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=6&sn=e04704c0c4f6ae6efb7d4a30d7b9c427&scene=21#wechat_redirect">《Python、Matlab水文模型(10)—新安江水文模型》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=7&sn=1c834695dad98ab0c27efb1b4e7530b1&scene=21#wechat_redirect">《Matlab水文模型(11)—HMETS水文模型》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=8&sn=e522130eb93a8de6c5701bbfd6adc851&scene=21#wechat_redirect">《R语言水文模型(12)—水文模型》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487441&idx=3&sn=7bf2881bd6e57558843adc8928ab9ef3&scene=21#wechat_redirect">《水文模型(13)—流溪河、DTVGM水文模型》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487441&idx=6&sn=de4409dae01156b5bd8dcf421ba2f719&scene=21#wechat_redirect">《R语言水文模型(14)—Topmodel、新安江水文模型》</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487663&idx=1&sn=2c407d9bd117360341e7944c065f709d&scene=21#wechat_redirect">《水文模型(15)—流域分布式生态水文模型（DEHM）》</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/reward/wechatpay.png" alt="GeoScienceLab 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E6%8D%AE/" rel="tag"><i class="fa fa-tag"></i> 数据</a>
+              <a href="/tags/%E9%99%8D%E6%B0%B4/" rel="tag"><i class="fa fa-tag"></i> 降水</a>
+              <a href="/tags/%E6%B0%94%E6%B8%A9/" rel="tag"><i class="fa fa-tag"></i> 气温</a>
+              <a href="/tags/%E5%BE%84%E6%B5%81/" rel="tag"><i class="fa fa-tag"></i> 径流</a>
+              <a href="/tags/%E5%B9%B2%E6%97%B1%E6%8C%87%E6%95%B0/" rel="tag"><i class="fa fa-tag"></i> 干旱指数</a>
+              <a href="/tags/%E5%9C%B0%E5%9B%BEshp/" rel="tag"><i class="fa fa-tag"></i> 地图shp</a>
+              <a href="/tags/%E6%B0%B4%E6%96%87%E6%A8%A1%E5%9E%8B/" rel="tag"><i class="fa fa-tag"></i> 水文模型</a>
+              <a href="/tags/%E6%B0%94%E8%B1%A1/" rel="tag"><i class="fa fa-tag"></i> 气象</a>
+              <a href="/tags/%E6%B0%B4%E6%96%87/" rel="tag"><i class="fa fa-tag"></i> 水文</a>
+              <a href="/tags/%E6%B0%94%E8%B1%A1%E6%B0%B4%E6%96%87/" rel="tag"><i class="fa fa-tag"></i> 气象水文</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/04/06/goodd-data/" rel="next" title="科研数据 | 全球大坝地理参考数据库（GOODD）">
+                  科研数据 | 全球大坝地理参考数据库（GOODD） <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81ODI4MS8zNDc0NA=="></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Smith</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">13k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">46 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<script src="/js/third-party/comments/livere.js"></script>
+
+</body>
+</html>

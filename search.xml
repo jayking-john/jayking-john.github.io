@@ -4,6 +4,203 @@
   
     
     <entry>
+      <title>科研数据 | 降水、气温、径流、干旱指数、地图shp、水文模型等气象水文数据</title>
+      <link href="/2023/04/06/cli-hydro-data-collect/"/>
+      <url>/2023/04/06/cli-hydro-data-collect/</url>
+      
+        <content type="html"><![CDATA[<blockquote class="blockquote-center"><p><font size=4.5><em>气象水文数据大汇总</em></font></p></blockquote><span id="more"></span><h2 id="一、气温、降水、径流等数据"><a href="#一、气温、降水、径流等数据" class="headerlink" title="一、气温、降水、径流等数据"></a>一、气温、降水、径流等数据</h2><ol><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247496120&idx=1&sn=9bc87f204a5728adfd58a56f9bf868e7&scene=21#wechat_redirect">《1979~2018年中国近地表日气温数据集》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247495971&idx=1&sn=da531c79467ac5cde11b927bacbcb91e&scene=21#wechat_redirect">《1960-2020年中国1公里分辨率月降水量数据集》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247495970&idx=1&sn=bd2ebf3943b323c0a6125e7f274a9c2c&scene=21#wechat_redirect">《1961-2019年中国(1天,1公里)气温和降水数据集》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247495105&idx=1&sn=19b0a211582a8aa4595b50c7f511b501&scene=21#wechat_redirect">《1961-2018年中国天然径流量格点数据集》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247493898&idx=1&sn=0c0185f92b6ca75eee57460c7ae67b7c&scene=21#wechat_redirect">《1901-2020年中国1km分辨率逐月平均气温、降水量数据集》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247491710&idx=1&sn=7000cd88b4b8b2604a4d62fcc37b142c&scene=21#wechat_redirect">《1942-2021年NOAA中国气象数据集》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247490306&idx=1&sn=9c01679dfa7bb9611f8f9dd5671e0daf&scene=21#wechat_redirect">《欧洲气候评估中心重建的Palmer干湿指数(scPDSI)》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247490236&idx=1&sn=2ddac163a933f04dc949fac0e3fe1027&scene=21#wechat_redirect">《西班牙国家研究委员会（CSIC）SPEI数据集》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487064&idx=1&sn=827df37802e89ed3deca1349b8fac2a0&scene=21#wechat_redirect">《1979~2018年中国区域地面气象要素驱动数据集》</a></li></ol><h2 id="二、地理数据"><a href="#二、地理数据" class="headerlink" title="二、地理数据"></a>二、地理数据</h2><ol><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247495215&idx=1&sn=65c349b4b4df7e55e32aba06098649a6&scene=21#wechat_redirect">《中国12.5米，30米，90米，250米，500米，1000米DEM地形数据》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247491581&idx=1&sn=812f56675cb913cd5a795477c197a1ba&scene=21#wechat_redirect">《1980~2020年中国区域30米和1000米土地利用数据》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247488120&idx=1&sn=d830858f7b86d1f32165b3eb76604e63&scene=21#wechat_redirect">《2000、2010及2020年中国global30土地利用数据》</a></li></ol><h2 id="三、地图数据"><a href="#三、地图数据" class="headerlink" title="三、地图数据"></a>三、地图数据</h2><ol><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247495776&idx=1&sn=4bf8a203bc09c118498b0e5adf28068a&scene=21#wechat_redirect">《1949~2023年共计75年中国省市县行政区划shp》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247495763&idx=1&sn=a0d2db923d53382ac52cb204271f617a&scene=21#wechat_redirect">《中国七大地理分区shp》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247493782&idx=1&sn=340520edd4006e1736fcde8e0f36cd01&scene=21#wechat_redirect">《中国区域1~5级水系、湖泊矢量图》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247493311&idx=1&sn=071e24cf04e70e95bd7a92eb9dbea514&scene=21#wechat_redirect">《中国区域1~3级流域矢量图、1~5级水系矢量图》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247491671&idx=1&sn=feba1ffd7894c95fae65b448ac732d83&scene=21#wechat_redirect">《2021年7月中国乡镇地图shp》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247489474&idx=1&sn=9fcf721775a877a4b3330eb8a00953fd&scene=21#wechat_redirect">《全球水文、自然气候和地貌子分类矢量数据》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247489284&idx=1&sn=7ac5c7170bfb248081a17639dd0a99e5&scene=21#wechat_redirect">《全球七大洲边界地图shp》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247489276&idx=1&sn=a474f80a8332646432559b1d1dea5c2d&scene=21#wechat_redirect">《中国领土完整的世界地图shp》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247488201&idx=1&sn=b64686dfa7f8c8951e72d53d66e4249e&scene=21#wechat_redirect">《三江源区shp》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247488177&idx=1&sn=c804248fa30382b081d04a693e59690e&scene=21#wechat_redirect">《青藏高原shp》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247488164&idx=1&sn=dcf87f91556080ed41da1ff23b3ef129&scene=21#wechat_redirect">《秦岭淮河区域shp》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247488148&idx=1&sn=b65c4d8ae4c47a934a784626da935f1f&scene=21#wechat_redirect">《秦岭+秦巴边界shp》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487954&idx=1&sn=7d7434a971a35e03f5ab5cc1f22f03b4&scene=21#wechat_redirect">《中国八大气候分区shp》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487744&idx=1&sn=389f7a2f03a05223cbda3bd054f9ea66&scene=21#wechat_redirect">《2019+2020+2021年中国省、市、县行政边界shp、json、geojson矢量数据》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487735&idx=1&sn=39f227b9258349e52656ca0023660e7f&scene=21#wechat_redirect">《石羊河流域shp、DEM及水系矢量图》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487487&idx=1&sn=af1a6e63536fc089add0be6c879c9390&scene=21#wechat_redirect">《气象水文地图shp分享AA制（1）》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487045&idx=2&sn=e6d2fd1b62304ffa3b058d5ff56274c2&scene=21#wechat_redirect">《全国省、市、县级底图及各省白化Surfer底图》</a></li></ol><h2 id="四、水文模型"><a href="#四、水文模型" class="headerlink" title="四、水文模型"></a>四、水文模型</h2><ol><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247486232&idx=1&sn=2a07a40eed0c16e0e4ae14d369abc9b7&scene=21#wechat_redirect">《水文模型—Matlab版本（1）》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247489470&idx=1&sn=987bac8ff0884299a43ebb7ea5e3bc38&scene=21#wechat_redirect">《R语言SWAT水文模型（2）》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487300&idx=1&sn=9f37f9c4cb49b028a6b82e8063f17273&scene=21#wechat_redirect">《Matlab水文模型(3)—连续降雨径流水文模型》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487307&idx=1&sn=eb1cd21172c7de4840da8da9685bad40&scene=21#wechat_redirect">《Matlab水文模型(4)—月水量平衡水文模型》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=1&sn=7852a05769dc0e771886ad24028f6546&scene=21#wechat_redirect">《Matlab水文模型(5)—HBV水文模型》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=2&sn=c9206e0b60c6c455800dc5830c5d13e0&scene=21#wechat_redirect">《Matlab水文模型(6)—非平稳概念性降雨径流工具箱》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=3&sn=cb6371369b1a349ff101282ef4c2a5bd&scene=21#wechat_redirect">《Matlab水文模型(7)—水文预报日模型、次洪模型》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=4&sn=94af5b89199654fe86feabbc673005da&scene=21#wechat_redirect">《Matlab水文模型(8)—半分布式冰川水文模型》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=5&sn=911932b945a01b90316ce838863d2a54&scene=21#wechat_redirect">《Matlab水文模型(9)—生态水文响应模型》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=6&sn=e04704c0c4f6ae6efb7d4a30d7b9c427&scene=21#wechat_redirect">《Python、Matlab水文模型(10)—新安江水文模型》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=7&sn=1c834695dad98ab0c27efb1b4e7530b1&scene=21#wechat_redirect">《Matlab水文模型(11)—HMETS水文模型》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487351&idx=8&sn=e522130eb93a8de6c5701bbfd6adc851&scene=21#wechat_redirect">《R语言水文模型(12)—水文模型》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487441&idx=3&sn=7bf2881bd6e57558843adc8928ab9ef3&scene=21#wechat_redirect">《水文模型(13)—流溪河、DTVGM水文模型》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487441&idx=6&sn=de4409dae01156b5bd8dcf421ba2f719&scene=21#wechat_redirect">《R语言水文模型(14)—Topmodel、新安江水文模型》</a></li><li><a href="https://mp.weixin.qq.com/s?__biz=MzIwODY3MzIxMQ==&mid=2247487663&idx=1&sn=2c407d9bd117360341e7944c065f709d&scene=21#wechat_redirect">《水文模型(15)—流域分布式生态水文模型（DEHM）》</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据资源 </category>
+          
+          <category> 数据集成 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据 </tag>
+            
+            <tag> 降水 </tag>
+            
+            <tag> 气温 </tag>
+            
+            <tag> 径流 </tag>
+            
+            <tag> 干旱指数 </tag>
+            
+            <tag> 地图shp </tag>
+            
+            <tag> 水文模型 </tag>
+            
+            <tag> 气象 </tag>
+            
+            <tag> 水文 </tag>
+            
+            <tag> 气象水文 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>科研数据 | 全球大坝地理参考数据库（GOODD）</title>
+      <link href="/2023/04/06/goodd-data/"/>
+      <url>/2023/04/06/goodd-data/</url>
+      
+        <content type="html"><![CDATA[<blockquote class="blockquote-center"><p><font size=4.5><em>全球大坝地理参考数据库,包含38,000多个地理坐标的大坝及其相关流域的全球数据集</em></font></p></blockquote><span id="more"></span><h2 id="全球大坝地理参考数据库（GOODD）"><a href="#全球大坝地理参考数据库（GOODD）" class="headerlink" title="全球大坝地理参考数据库（GOODD）"></a>全球大坝地理参考数据库（GOODD）</h2><p>全球大坝地理坐标数据库是一个包含38,000多个地理坐标的大坝及其相关流域的全球数据集。源文件介绍了一个小型团队通过对全球范围内的卫星图像进行系统化数字化而开发的全球数据库，并强调了估计偏差和验证数据的各种方法。提供了以下数据集：</p><ul><li>（a）大坝墙体位置的原始数字化坐标（可能对从图像中识别大坝的机器学习方法有用）；</li><li>（b）每个大坝的全球流域矢量文件。</li></ul><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这个数据库可以用来对大坝的功能和影响进行广泛的评估。我们的重点是确定为这些大坝供水（和沉积物）的集水区。了解这些集水区对于了解气候变化、土地利用变化和土地管理干预的影响非常重要，这些干预措施支持这些流域内的生态系统服务的提供，这些生态系统服务在这些点上实现为蓄水或水电能量。我们描述了GOODD的开发和验证，并强调了数据的一些剩余偏差。 </p><h2 id="论文信息"><a href="#论文信息" class="headerlink" title="论文信息"></a>论文信息</h2><blockquote><p><a href="https://www.nature.com/articles/s41597-020-0362-5">GOODD, a global dataset of more than 38,000 georeferenced dams</a></p></blockquote><h2 id="下载数据集"><a href="#下载数据集" class="headerlink" title="下载数据集"></a>下载数据集</h2><blockquote><p><a href="http://www.globaldamwatch.org/">Global Dam Watch data portal</a>&gt;</p></blockquote><h2 id="数据引用："><a href="#数据引用：" class="headerlink" title="数据引用："></a>数据引用：</h2><blockquote><p>van Soesbergen, Arnout; Mulligan, Mark; Sáenz, Leonardo (2020): GOODD global dam dataset<br>figshare. Dataset. <a href="https://doi.org/10.6084/m9.figshare.9747686.v1">https://doi.org/10.6084/m9.figshare.9747686.v1</a></p></blockquote><h2 id="文献引用："><a href="#文献引用：" class="headerlink" title="文献引用："></a>文献引用：</h2><blockquote><p>Mulligan, Mark, Arnout van Soesbergen, and Leonardo Sáenz. “GOODD, a global dataset of more than 38,000 georeferenced dams.” Scientific Data 7, no. 1 (2020): 1-8.</p></blockquote><h2 id="GEE展示代码"><a href="#GEE展示代码" class="headerlink" title="GEE展示代码"></a>GEE展示代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">var</span> <span class="variable">catchments</span> <span class="operator">=</span> ee.FeatureCollection(<span class="string">&quot;projects/sat-io/open-datasets/GOODD/GOOD2_catchments&quot;</span>);</span><br><span class="line"><span class="type">var</span> <span class="variable">dams</span> <span class="operator">=</span> ee.FeatureCollection(<span class="string">&quot;projects/sat-io/open-datasets/GOODD/GOOD2_dams&quot;</span>);</span><br><span class="line"></span><br><span class="line">Map.addLayer(ee.Image().paint(catchments,<span class="number">0</span>,<span class="number">3</span>), &#123;<span class="string">&quot;palette&quot;</span>:[<span class="string">&quot;008000&quot;</span>]&#125;, <span class="string">&#x27;GOODD Catchments&#x27;</span>)</span><br><span class="line">Map.addLayer(dams, &#123;<span class="string">&quot;palette&quot;</span>:<span class="string">&quot;FF0000&quot;</span>&#125;, <span class="string">&#x27;GOODD Dams&#x27;</span>)</span><br></pre></td></tr></table></figure><h2 id="代码链接："><a href="#代码链接：" class="headerlink" title="代码链接："></a>代码链接：</h2><p><a href="https://code.earthengine.google.com/?scriptPath=users/sat-io/awesome-gee-catalog-examples:hydrology/GLOBAL-GEOREF-DATABASE-DAMS">https://code.earthengine.google.com/?scriptPath=users/sat-io/awesome-gee-catalog-examples:hydrology/GLOBAL-GEOREF-DATABASE-DAMS</a></p><p>License</p><p>The dataset is released under a CC0 1.0 Universal (CC0 1.0) Public Domain Dedication. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.</p><p>Created by : Mulligan, Mark, Arnout van Soesbergen, and Leonardo Sáenz</p><p>Curated in GEE by: Samapriya Roy</p><p>Keywords: Global dams, global catchments, vector, Hydrology</p><p>Last updated : 2021-07-24</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据资源 </category>
+          
+          <category> 点位数据 </category>
+          
+          <category> 水文数据 </category>
+          
+          <category> 大坝数据 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据 </tag>
+            
+            <tag> 全球 </tag>
+            
+            <tag> 河流 </tag>
+            
+            <tag> 大坝 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>技术文档 | 下载国自然结题报告PDF的方法</title>
+      <link href="/2023/04/06/download-nsfc-pdf/"/>
+      <url>/2023/04/06/download-nsfc-pdf/</url>
+      
+        <content type="html"><![CDATA[<blockquote class="blockquote-center"><p><font size=4.5><em>利用插件将国家自然科学基金PDF文档下载下来</em></font></p></blockquote><span id="more"></span><p><strong>国自然结题报告</strong></p><p>做研究好的idea很重要，成熟的idea更重要。趁早就构思idea、可以学习国家自然科学基金的前沿报告，加上有的导师也会让研究生帮忙看本子写本子，如何学习呢？最好在国家自然科学基金委的官方网站上搜索项目的结题报告。</p><h2 id="官方下载链接："><a href="#官方下载链接：" class="headerlink" title="官方下载链接："></a>官方下载链接：</h2><ul><li><a href="https://kd.nsfc.gov.cn/finalProjectInit">https://kd.nsfc.gov.cn/finalProjectInit</a></li><li><a href="https://www.nstrs.cn/index">https://www.nstrs.cn/index</a></li></ul><img src="https://s1.ax1x.com/2023/04/06/ppovYvV.png"><p>国自然的申请书我们是看不到的，但是结题报告在基金网站上是被公布出来的。但由于基金官网只能查看图片，不能下载成PDF。</p><p>非常不利于学习和观看，介绍一个下载PDF的方法，免费下载国自然基金已结题项目的PDF文档。：</p><p>方法较为简单，支持同时下载多个结题报告PDF（多开页面就好）</p><h2 id="下载方法"><a href="#下载方法" class="headerlink" title="下载方法"></a>下载方法</h2><ol><li><p>以Chrome为例，安装浏览器插件Tampermonkey</p><img src="https://s1.ax1x.com/2023/04/06/ppov7xP.png"></li><li><p>下载好之后启用，点击获取新脚本</p><img src="https://s1.ax1x.com/2023/04/06/ppov45d.png"></li><li><p>点击GreasyFork</p><img src="https://s1.ax1x.com/2023/04/06/ppovIPA.png"></li><li><p>搜索NSFC，点击安装</p><img src="https://s1.ax1x.com/2023/04/06/ppovo8I.png"><img src="https://s1.ax1x.com/2023/04/06/ppovT2t.png"><img src="https://s1.ax1x.com/2023/04/06/ppovfVe.png"></li><li><p>重新返回（或刷新）国自然页面 如结题项目详情，你就会在结题报告的位置看到下载按钮了</p><img src="https://s1.ax1x.com/2023/04/06/ppovhUH.png"></li><li><p>点击下载全文，就能直接下载好可复制的PDF了</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术文档 </category>
+          
+          <category> 科研技术 </category>
+          
+          <category> 国家自然科学基金 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术文档 </tag>
+            
+            <tag> 科研技术 </tag>
+            
+            <tag> 下载 </tag>
+            
+            <tag> PDF </tag>
+            
+            <tag> 国自然 </tag>
+            
+            <tag> 国家自然科学基金 </tag>
+            
+            <tag> 结题报告 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>科研数据 | 卢麾副教授团队合作发布高精度国产风云卫星全球逐日土壤水分数据集(2010-2019)</title>
+      <link href="/2023/04/06/global-soil-moisture-luhui/"/>
+      <url>/2023/04/06/global-soil-moisture-luhui/</url>
+      
+        <content type="html"><![CDATA[<blockquote class="blockquote-center"><p><font size=4.5><em>基于风云卫星FY-3B数据的全球日尺度土壤水分数据集（2010-2019）</em></font></p></blockquote><span id="more"></span><div class="note info"><p>近期，国家青藏高原数据中心作为科研论文关联数据仓储发布了清华大学地球系统科学系卢麾副教授团队和中国科学院空天信息创新研究院施建成研究员团队联合研制的“基于风云卫星FY-3B数据的全球日尺度土壤水分数据集（2010-2019）”（<a href="https://doi.org/10.11888/Terre.tpdc.271954">https://doi.org/10.11888/Terre.tpdc.271954</a> ），数据可开放获取。</p><p>其关联论文“A global daily soil moisture dataset derived from Chinese FengYun-3B Microwave Radiation Imager (MWRI) (2010-2019)” （<a href="https://www.nature.com/articles/s41597-023-02007-3">https://www.nature.com/articles/s41597-023-02007-3</a> ）在Scientific Data上发表。</p></div><h2 id="数据介绍"><a href="#数据介绍" class="headerlink" title="数据介绍"></a>数据介绍</h2><p>地表土壤水分是开展干旱监测、洪水预报和天气预报等相关研究的重要基础。目前被动微波遥感是全球尺度监测土壤水分的主流手段，微波波段中L波段（例如美国NASA的SMAP卫星传感器）可提供高精度的全球土壤水分产品。中国风云三号系列卫星（FY-3A&#x2F;B&#x2F;C&#x2F;D）搭载的X波段微波辐射计可提供自2008年的持续的且日内多次的对地观测数据，但相比L波段，X波段对土壤水分的敏感度有所下降，FY-3系列的土壤水分产品精度有待提高。</p><p>清华大学卢麾副教授团队联合中国科学院空天信息创新研究院施建成研究员团队，结合微波辐射传输模型和机器学习方法，将SMAP卫星L波段的高精度传递到风云卫星的X波段，发展了一套FY-3B全球逐日土壤水分数据集（2010-2019），空间分辨率为36 km，数据单位为m3&#x2F;m3。经全球14个密集地面验证网和258个通量站验证，数据集与地面观测以及SMAP产品的一致性较好，精度高于风云卫星官方土壤水分产品（图2）。</p><p>研究团队前期还发布了近20年的AMSR-E&#x2F;AMSR2土壤水分产品（<a href="https://doi.org/10.11888/Soil.tpdc.270960">https://doi.org/10.11888/Soil.tpdc.270960</a> ），因其与SMAP相当的精度且更长的时间序列得到了广泛的关注和应用。本风云数据集与AMSR-E&#x2F;AMSR2有很高的一致性，因此能够填补AMSR系列2011.10-2012.6期间的数据空缺(图2)。</p><p>通过本数据集和后续系列数据的生产和发布，使得中国风云三号系列卫星能够提供可持续的、长时序的土壤水分数据集产品，以推动中国国产卫星在水文研究等领域发挥更大作用。</p><img src="https://s1.ax1x.com/2023/04/06/ppojlSx.png"><center><font size=3>图2 土壤水分时间序列的地面站验证结果：地面观测（Obs-sm，灰色线），SMAP土壤水分（SMAPsm，红色），本数据（NNsm-FY，蓝色），风云卫星官方产品（FY-sm，绿色），本团队前期发布的AMSR数据（NNsm-AMSR，紫色）</font></center><p>该数据集的研发工作得到了国家自然科学基金重大项目“陆地水循环关键参量时空多尺度智慧化遥感”(42090014)、地球系统数值模拟教育部重点实验室（清华大学）开放基金、第二次青藏高原综合科学考察研究（2019QZKK0206）、国家重点研发计划（2018YFB0504905）的资助。</p><hr><h2 id="论文信息"><a href="#论文信息" class="headerlink" title="论文信息"></a>论文信息</h2><p>Yao, P.P., Lu, H., Zhao, T.J., Wu, S.L., Peng Z.Q., Cosh, M.H., Jia L., Yang K., Zhang, P., Shi, J.C. A global daily soil moisture dataset derived from Chinese FengYun-3B Microwave Radiation Imager (MWRI) (2010-2019). Scientific Data. 2023. <a href="https://www.nature.com/articles/s41597-023-02007-3">https://www.nature.com/articles/s41597-023-02007-3</a>.</p><h2 id="数据信息"><a href="#数据信息" class="headerlink" title="数据信息"></a>数据信息</h2><ol><li><p>姚盼盼, 卢麾, 赵天杰, 武胜利, 施建成. (2021). 基于风云卫星FY-3B微波成像仪MWRI数据的全球日尺度土壤水分数据集（2010-2019）. 国家青藏高原科学数据中心, <a href="https://doi.org/10.11888/Terre.tpdc.271954">https://doi.org/10.11888/Terre.tpdc.271954</a>.<br><a href="https://cstr.cn/18406.11.Terre.tpdc.271954">https://cstr.cn/18406.11.Terre.tpdc.271954</a>.</p></li><li><p>姚盼盼, 卢麾. (2020). 基于AMSR-E和AMSR2数据的全球长时序日尺度土壤水分数据集（2002-2022）. 国家青藏高原科学数据中心, <a href="https://doi.org/10.11888/Soil.tpdc.270960">https://doi.org/10.11888/Soil.tpdc.270960</a>.<br> <a href="https://cstr.cn/18406.11.Soil.tpdc.270960">https://cstr.cn/18406.11.Soil.tpdc.270960</a>.</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据资源 </category>
+          
+          <category> 格网数据 </category>
+          
+          <category> 土壤理化 </category>
+          
+          <category> 土壤水分 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据 </tag>
+            
+            <tag> 土壤水分 </tag>
+            
+            <tag> 全球 </tag>
+            
+            <tag> soil moisture </tag>
+            
+            <tag> 日尺度 </tag>
+            
+            <tag> 逐日 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>模型 | InVEST中文版</title>
+      <link href="/2023/04/06/invest-model/"/>
+      <url>/2023/04/06/invest-model/</url>
+      
+        <content type="html"><![CDATA[<blockquote class="blockquote-center"><p><font size=4.5><em>最新更新的InVEST软件3.13版本已支持中文版，内置中文语言包，可自行切换。</em></font></p></blockquote><span id="more"></span><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>InVEST模型（Integrated Valuation of Ecosystem Services and Tradeoffs）即生态系统服务评估与权衡模型，可于评估生态系统服务功能量及其经济价值、支持生态系统管理和决策的一套模型系统，包括陆地、淡 水和海洋三类生态系统服务评估模型。</p><h2 id="3-13版本优点"><a href="#3-13版本优点" class="headerlink" title="3.13版本优点"></a>3.13版本优点</h2><ul><li>提供中文界面</li><li>支持中文路径；</li><li>支持本地离线帮助文档（中文、英文均支持）；</li></ul><h2 id="中文版使用"><a href="#中文版使用" class="headerlink" title="中文版使用"></a>中文版使用</h2><p>进入官网发现已更新到3.13版本，并且上线中文教程文档，直接点击左侧3.31版本下载安装即可。</p><p><a href="https://naturalcapitalproject.stanford.edu/software/invest">下载官网</a></p><img src="https://s1.ax1x.com/2023/04/06/ppoXirD.png"><p>安装完成后，打开InVEST软件，然后设置所需语言，选中中文即可切换中文版，点击左侧用户指南，可弹出对应模块的帮助文档（该文档为离线文档，无网络也能用）如下图所示。</p><img src="https://s1.ax1x.com/2023/04/06/ppoXYin.png"><img src="https://s1.ax1x.com/2023/04/06/ppoX8aj.png"><img src="https://s1.ax1x.com/2023/04/06/ppoX3ZQ.png"><img src="https://s1.ax1x.com/2023/04/06/ppoXGIs.png"><blockquote><p>有需要的可以到官网下载安装、使用；关于软件中一些具体的参数和解释，建议以英文版帮助文档为主，避免中文文档因翻译而出现歧义。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术文档 </category>
+          
+          <category> 模型 </category>
+          
+          <category> InVEST </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 模型 </tag>
+            
+            <tag> InVEST </tag>
+            
+            <tag> 生态系统服务评估与权衡模型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>sublime中添加Markdown编辑功能以及实现实时预览功能</title>
       <link href="/2023/04/05/markdown-in-sublime/"/>
       <url>/2023/04/05/markdown-in-sublime/</url>
@@ -41,7 +238,7 @@
       <link href="/2023/04/01/forest-canopy-height30m/"/>
       <url>/2023/04/01/forest-canopy-height30m/</url>
       
-        <content type="html"><![CDATA[<blockquote class="blockquote-center"><p><font size=4.5><em>借助140平方公里的无人机激光雷达数据训练了深度学习指导的空间内插模型，内插GEDI与ICESat-2 ATLAS星载激光雷达脚点数据，成功绘制了全国30米分辨率的森林冠层高度产品</em></font></p></blockquote><span id="more"></span><blockquote><p>刘小强，苏艳军，胡天宇，方精云，唐志尧，唐昊，郭庆华(中国科学院植物研究所，北京大学，新加坡国立大学)发布时间：2021&#x2F;12&#x2F;16 9:12:46</p></blockquote><div class="note "><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3></div><p>国家与全球尺度的高分辨率森林冠层高度产品对估算森林碳储存、理解森林生态系统过程、以及制定森林经营政策等至关重要。目前，现有的森林冠层高度产品的空间分辨率一般是500米或1000米，难以满足应用需求。新近发射的星载激光雷达传感器GEDI与ICESat-2 ATLAS可以获取全球范围内分米级空间分辨率的森林冠层高度脚点数据，为大尺度森林冠层高度的高分辨率绘制提供了可能。但是星载激光雷达获取的脚点数据是沿卫星轨道离散分布的，无法直接生成空间连续的森林冠层高度产品。以往的研究通常利用星载激光雷达脚点数据与遥感影像和环境因子建立回归模型生成空间连续的大尺度森林冠层高度产品，该方法难以充分利用GEDI与ICESat-2 ATLAS较为密集的脚点数据，并且容易受到遥感影像饱和效应的影响。本产品采用了一种深度学习指导的空间内插模型，利用深度神经网络自动学习权重的能力，解决了如何在内插模型中均衡考虑空间、环境与光谱等特征距离的权重贡献，突破了常用内插模型仅使用空间距离的局限。借助140平方公里的无人机激光雷达数据训练了该空间内插模型，内插GEDI与ICESat-2 ATLAS星载激光雷达脚点数据，成功绘制了全国30米分辨率的森林冠层高度产品。通过与三套独立的验证数据集（超过100万个的GEDI 脚点数据、33平方千米的无人机激光雷达数据和近6万条的森林清查数据）相比，这套全国森林冠层高度产品的精度较高（R2≥0.55，RMSE≤5.5 m），受益于空间内插策略，本产品在森林冠层较高的地区几乎没有出现饱和。这套高精度、高空间分辨率的全国森林冠层高度产品有助于提升大尺度森林生物量估算的准确性，为制定气候减缓政策与实现“碳中和”目标提供数据支持。</p><p>Spatially continuous estimates of forest canopy height at national to global scales are critical for quantifying forest carbon storage, understanding forest ecosystem processes, and developing forest management and restoration policies to mitigate global climate change. Spaceborne light detection and ranging (lidar) platforms, especially the Global Ecosystem Dynamics Investigation (GEDI) and Ice, Cloud, and land Elevation Satellite-2 (ICESat-2) Advanced Topographic Laser Altimeter System (ATLAS), can measure forest canopy height in discrete footprints globally. Their coverage provides a promising data source for national to global-scale forest canopy height estimates. However, previous studies usually used a regression-based approach to develop spatially continuous forest canopy height distribution through the aid of optical images, which cannot take full advantage of the dense spaceborne lidar footprints and may still suffer from the saturation effect of optical images. We developed a novel neural network guided interpolation (NNGI) method to map China’s forest canopy height by fusing GEDI, ICESat-2 ATLAS, and Sentinel-2 images. We evaluated the interpolated forest canopy height product of China by over 1,100,000 GEDI validation footprints (R2&#x3D;0.55, RMSE&#x3D;5.32 m), about 33 km2 drone-lidar validation data (R2&#x3D;0.58, RMSE&#x3D;4.93 m), and over 59,000 field plot measurements (R2&#x3D;0.60, RMSE&#x3D;4.88 m). Benefiting from the interpolation-based mapping strategy, the resulting product had almost no saturation effect in areas with tall forest canopies. The interpolated forest canopy height with high mapping accuracy and high spatial resolution is likely beneficial for improving the accuracy of forest biomass mapping and informing climate mitigation policy initiatives to achieve China’s goal of carbon neutrality.</p><p><a href="https://imgse.com/i/ppWA85d"><img src="https://s1.ax1x.com/2023/04/01/ppWA85d.md.jpg" alt="ppWA85d.jpg" border="0" /></a></p><div class="note "><h3 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h3></div><p>森林冠层高度，无人机激光雷达，星载激光雷达，遥感影像</p><div class="note "><h3 id="数据集信息"><a href="#数据集信息" class="headerlink" title="数据集信息"></a>数据集信息</h3></div><table><thead><tr><th align="left"><img width=100/><center>信息</center></th><th align="left"><img width=100/><center>内容</center></th></tr></thead><tbody><tr><td align="left">记录数:</td><td align="left">5条</td></tr><tr><td align="left">数据量:</td><td align="left">5.01 GB</td></tr><tr><td align="left">项目资助:</td><td align="left">中国科学院战略性科技先导专项（A类）（XDA19050401）与国家自然科学基金面上项目（41871332, 31971575, 41901358）</td></tr><tr><td align="left">共享方式:</td><td align="left">全部共享（数据保护期外，提供全部数据和媒体下载）</td></tr><tr><td align="left">开放日期:</td><td align="left">2021&#x2F;12&#x2F;13</td></tr><tr><td align="left">使用许可:</td><td align="left">署名-非商业性使用-禁止演绎 CC 4.0 国际版 (CC BY-NC-ND 4.0)</td></tr><tr><td align="left">使用方法:</td><td align="left">详见README.docx <a href="http://www.3decology.org/chinatreeheight/">http://www.3decology.org/chinatreeheight/</a></td></tr></tbody></table><div class="note "><h3 id="数据引用"><a href="#数据引用" class="headerlink" title="数据引用"></a>数据引用</h3></div><table><thead><tr><th align="left"><img width=100/><center>信息</center></th><th align="left"><img width=100/><center>内容</center></th></tr></thead><tbody><tr><td align="left">必引文献:</td><td align="left">Liu, X., Su, Y., Hu, T. et al. 2021. Neural network guided interpolation for mapping canopy height of China’s forests by integrating GEDI and ICESat-2 data. Remote Sens. Environ. <a href="https://doi.org/10.1016/j.rse.2021.112844">https://doi.org/10.1016/j.rse.2021.112844</a>.</td></tr><tr><td align="left">数据引用:</td><td align="left">数据来源于：30米空间分辨率全国森林冠层高度分布产品,刘小强，苏艳军，胡天宇，方精云，唐志尧，唐昊，郭庆华(中国科学院植物研究所，北京大学，新加坡国立大学), 2021, 中国科学院植物科学数据中心, CSTR:34735.11.PLANTDATA.0066 <br/> Normative references：The forest canopy height distribution of China at 30 m resolution, 2021, Plant Data Center of Chinese Academy of Sciences, CSTR:34735.11.PLANTDATA.0066</td></tr></tbody></table><div class="note "><h3 id="数据使用条款"><a href="#数据使用条款" class="headerlink" title="数据使用条款"></a>数据使用条款</h3></div><div class="note "> <font size=2>为尊重知识产权、保障数据作者的权益、扩展数据中心的服务、评估数据的应用潜力，请数据使用者在使用数据所产生的研究成果中（包括公开发表的论文、论著、数据产品和未公开发表的研究报告、数据产品等成果），明确注明数据来源和数据作者。对于转载（二次或多次发布）的数据，作者还须注明原始数据来源。<br/>中文致谢方式：<br/>　　感谢中国科学院植物科学数据中心(Plant Data Center of Chinese Academy of Sciences, https://www.plantplus.cn) 提供数据支撑。<br/>To respect the intellectual property rights, protect the rights of data authors, expand services of the data center, and evaluate the application potential of data, data users should clearly indicate the source of the data and the author of the data in the research results generated by using the data (including published papers, articles, data products, and unpublished research reports, data products and other results). For re-posting (second or multiple releases) data, the author must also indicate the source of the original data.<br/>Acknowledgements：<br/>　　Acknowledgement for the data support from Plant Data Center of Chinese Academy of Sciences (https://www.plantplus.cn).</font></div><table><thead><tr><th align="left">数据提供机构</center></th><th align="left"><img width=100/><center>中国科学院植物研究所，北京大学，新加坡国立大学</center></th></tr></thead><tbody><tr><td align="left">数据提供者：</td><td align="left">刘小强，苏艳军，胡天宇，方精云，唐志尧，唐昊，郭庆华</td></tr><tr><td align="left">联系人：</td><td align="left">刘小强</td></tr><tr><td align="left">联系电话：</td><td align="left">18518602018</td></tr><tr><td align="left">电子邮箱：</td><td align="left"><a href="mailto:&#x6c;&#105;&#117;&#x78;&#x69;&#97;&#x6f;&#x71;&#105;&#x61;&#x6e;&#103;&#x40;&#x69;&#98;&#99;&#97;&#115;&#46;&#97;&#99;&#46;&#x63;&#x6e;">&#x6c;&#105;&#117;&#x78;&#x69;&#97;&#x6f;&#x71;&#105;&#x61;&#x6e;&#103;&#x40;&#x69;&#98;&#99;&#97;&#115;&#46;&#97;&#99;&#46;&#x63;&#x6e;</a></td></tr></tbody></table><div class="note info"><p>数据原始发布平台：<a href="https://www.plantplus.cn/cn/dataset/3EB5137DA344A951">中国科学院植物科学数据中心</a></p></div>]]></content>
+        <content type="html"><![CDATA[<blockquote class="blockquote-center"><p><font size=4.5><em>借助140平方公里的无人机激光雷达数据训练了深度学习指导的空间内插模型，内插GEDI与ICESat-2 ATLAS星载激光雷达脚点数据，成功绘制了全国30米分辨率的森林冠层高度产品</em></font></p></blockquote><span id="more"></span><blockquote><p>刘小强，苏艳军，胡天宇，方精云，唐志尧，唐昊，郭庆华(中国科学院植物研究所，北京大学，新加坡国立大学)发布时间：2021&#x2F;12&#x2F;16 9:12:46</p></blockquote><div class="note "><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3></div><p>国家与全球尺度的高分辨率森林冠层高度产品对估算森林碳储存、理解森林生态系统过程、以及制定森林经营政策等至关重要。目前，现有的森林冠层高度产品的空间分辨率一般是500米或1000米，难以满足应用需求。新近发射的星载激光雷达传感器GEDI与ICESat-2 ATLAS可以获取全球范围内分米级空间分辨率的森林冠层高度脚点数据，为大尺度森林冠层高度的高分辨率绘制提供了可能。但是星载激光雷达获取的脚点数据是沿卫星轨道离散分布的，无法直接生成空间连续的森林冠层高度产品。以往的研究通常利用星载激光雷达脚点数据与遥感影像和环境因子建立回归模型生成空间连续的大尺度森林冠层高度产品，该方法难以充分利用GEDI与ICESat-2 ATLAS较为密集的脚点数据，并且容易受到遥感影像饱和效应的影响。本产品采用了一种深度学习指导的空间内插模型，利用深度神经网络自动学习权重的能力，解决了如何在内插模型中均衡考虑空间、环境与光谱等特征距离的权重贡献，突破了常用内插模型仅使用空间距离的局限。借助140平方公里的无人机激光雷达数据训练了该空间内插模型，内插GEDI与ICESat-2 ATLAS星载激光雷达脚点数据，成功绘制了全国30米分辨率的森林冠层高度产品。通过与三套独立的验证数据集（超过100万个的GEDI 脚点数据、33平方千米的无人机激光雷达数据和近6万条的森林清查数据）相比，这套全国森林冠层高度产品的精度较高（R2≥0.55，RMSE≤5.5 m），受益于空间内插策略，本产品在森林冠层较高的地区几乎没有出现饱和。这套高精度、高空间分辨率的全国森林冠层高度产品有助于提升大尺度森林生物量估算的准确性，为制定气候减缓政策与实现“碳中和”目标提供数据支持。</p><p>Spatially continuous estimates of forest canopy height at national to global scales are critical for quantifying forest carbon storage, understanding forest ecosystem processes, and developing forest management and restoration policies to mitigate global climate change. Spaceborne light detection and ranging (lidar) platforms, especially the Global Ecosystem Dynamics Investigation (GEDI) and Ice, Cloud, and land Elevation Satellite-2 (ICESat-2) Advanced Topographic Laser Altimeter System (ATLAS), can measure forest canopy height in discrete footprints globally. Their coverage provides a promising data source for national to global-scale forest canopy height estimates. However, previous studies usually used a regression-based approach to develop spatially continuous forest canopy height distribution through the aid of optical images, which cannot take full advantage of the dense spaceborne lidar footprints and may still suffer from the saturation effect of optical images. We developed a novel neural network guided interpolation (NNGI) method to map China’s forest canopy height by fusing GEDI, ICESat-2 ATLAS, and Sentinel-2 images. We evaluated the interpolated forest canopy height product of China by over 1,100,000 GEDI validation footprints (R2&#x3D;0.55, RMSE&#x3D;5.32 m), about 33 km2 drone-lidar validation data (R2&#x3D;0.58, RMSE&#x3D;4.93 m), and over 59,000 field plot measurements (R2&#x3D;0.60, RMSE&#x3D;4.88 m). Benefiting from the interpolation-based mapping strategy, the resulting product had almost no saturation effect in areas with tall forest canopies. The interpolated forest canopy height with high mapping accuracy and high spatial resolution is likely beneficial for improving the accuracy of forest biomass mapping and informing climate mitigation policy initiatives to achieve China’s goal of carbon neutrality.</p><p><a href="https://imgse.com/i/ppWA85d"><img src="https://s1.ax1x.com/2023/04/01/ppWA85d.md.jpg" alt="ppWA85d.jpg" border="0" /></a></p><div class="note "><h3 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h3></div><p>森林冠层高度，无人机激光雷达，星载激光雷达，遥感影像</p><div class="note "><h3 id="数据集信息"><a href="#数据集信息" class="headerlink" title="数据集信息"></a>数据集信息</h3></div><table><thead><tr><th align="left"><img width=100/><center>信息</center></th><th align="left"><img width=100/><center>内容</center></th></tr></thead><tbody><tr><td align="left">记录数:</td><td align="left">5条</td></tr><tr><td align="left">数据量:</td><td align="left">5.01 GB</td></tr><tr><td align="left">项目资助:</td><td align="left">中国科学院战略性科技先导专项（A类）（XDA19050401）与国家自然科学基金面上项目（41871332, 31971575, 41901358）</td></tr><tr><td align="left">共享方式:</td><td align="left">全部共享（数据保护期外，提供全部数据和媒体下载）</td></tr><tr><td align="left">开放日期:</td><td align="left">2021&#x2F;12&#x2F;13</td></tr><tr><td align="left">使用许可:</td><td align="left">署名-非商业性使用-禁止演绎 CC 4.0 国际版 (CC BY-NC-ND 4.0)</td></tr><tr><td align="left">使用方法:</td><td align="left">详见README.docx <a href="http://www.3decology.org/chinatreeheight/">http://www.3decology.org/chinatreeheight/</a></td></tr></tbody></table><div class="note "><h3 id="数据引用"><a href="#数据引用" class="headerlink" title="数据引用"></a>数据引用</h3></div><table><thead><tr><th align="left"><img width=100/><center>信息</center></th><th align="left"><img width=100/><center>内容</center></th></tr></thead><tbody><tr><td align="left">必引文献:</td><td align="left">Liu, X., Su, Y., Hu, T. et al. 2021. Neural network guided interpolation for mapping canopy height of China’s forests by integrating GEDI and ICESat-2 data. Remote Sens. Environ. <a href="https://doi.org/10.1016/j.rse.2021.112844">https://doi.org/10.1016/j.rse.2021.112844</a>.</td></tr><tr><td align="left">数据引用:</td><td align="left">数据来源于：30米空间分辨率全国森林冠层高度分布产品,刘小强，苏艳军，胡天宇，方精云，唐志尧，唐昊，郭庆华(中国科学院植物研究所，北京大学，新加坡国立大学), 2021, 中国科学院植物科学数据中心, CSTR:34735.11.PLANTDATA.0066 <br/> Normative references：The forest canopy height distribution of China at 30 m resolution, 2021, Plant Data Center of Chinese Academy of Sciences, CSTR:34735.11.PLANTDATA.0066</td></tr></tbody></table><div class="note "><h3 id="数据使用条款"><a href="#数据使用条款" class="headerlink" title="数据使用条款"></a>数据使用条款</h3></div><div class="note "> <font size=2>为尊重知识产权、保障数据作者的权益、扩展数据中心的服务、评估数据的应用潜力，请数据使用者在使用数据所产生的研究成果中（包括公开发表的论文、论著、数据产品和未公开发表的研究报告、数据产品等成果），明确注明数据来源和数据作者。对于转载（二次或多次发布）的数据，作者还须注明原始数据来源。<br/>中文致谢方式：<br/>　　感谢中国科学院植物科学数据中心(Plant Data Center of Chinese Academy of Sciences, https://www.plantplus.cn) 提供数据支撑。<br/>To respect the intellectual property rights, protect the rights of data authors, expand services of the data center, and evaluate the application potential of data, data users should clearly indicate the source of the data and the author of the data in the research results generated by using the data (including published papers, articles, data products, and unpublished research reports, data products and other results). For re-posting (second or multiple releases) data, the author must also indicate the source of the original data.<br/>Acknowledgements：<br/>　　Acknowledgement for the data support from Plant Data Center of Chinese Academy of Sciences (https://www.plantplus.cn).</font></div><table><thead><tr><th align="left">数据提供机构</center></th><th align="left"><img width=100/><center>中国科学院植物研究所，北京大学，新加坡国立大学</center></th></tr></thead><tbody><tr><td align="left">数据提供者：</td><td align="left">刘小强，苏艳军，胡天宇，方精云，唐志尧，唐昊，郭庆华</td></tr><tr><td align="left">联系人：</td><td align="left">刘小强</td></tr><tr><td align="left">联系电话：</td><td align="left">18518602018</td></tr><tr><td align="left">电子邮箱：</td><td align="left"><a href="mailto:&#108;&#105;&#x75;&#x78;&#x69;&#97;&#x6f;&#113;&#x69;&#97;&#110;&#x67;&#x40;&#105;&#98;&#99;&#97;&#115;&#x2e;&#97;&#x63;&#46;&#99;&#x6e;">&#108;&#105;&#x75;&#x78;&#x69;&#97;&#x6f;&#113;&#x69;&#97;&#110;&#x67;&#x40;&#105;&#98;&#99;&#97;&#115;&#x2e;&#97;&#x63;&#46;&#99;&#x6e;</a></td></tr></tbody></table><div class="note info"><p>数据原始发布平台：<a href="https://www.plantplus.cn/cn/dataset/3EB5137DA344A951">中国科学院植物科学数据中心</a></p></div>]]></content>
       
       
       <categories>
@@ -51,6 +248,8 @@
           <category> 格网数据 </category>
           
           <category> 植被参数 </category>
+          
+          <category> 冠层高度 </category>
           
       </categories>
       
@@ -242,6 +441,8 @@
           <category> 格网数据 </category>
           
           <category> 基础地理 </category>
+          
+          <category> DEM </category>
           
       </categories>
       
