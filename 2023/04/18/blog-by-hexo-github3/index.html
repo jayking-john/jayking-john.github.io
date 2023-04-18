@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#708090"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png">
+  <link rel="mask-icon" href="/images/logo.png" color="#708090">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"jayking-john.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"livere","storage":true,"lazyload":false,"nav":null,"activeClass":"livere"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Next基本配置一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客技术 | 利用Github和Hexo构建自己的博客网站三">
+<meta property="og:url" content="https://jayking-john.github.io/2023/04/18/blog-by-hexo-github3/index.html">
+<meta property="og:site_name" content="GeoScienceLab">
+<meta property="og:description" content="Next基本配置一">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2023/04/18/p9iJ1iV.png">
+<meta property="article:published_time" content="2023-04-18T12:11:27.000Z">
+<meta property="article:modified_time" content="2023-04-18T12:15:13.733Z">
+<meta property="article:author" content="GeoScienceLab">
+<meta property="article:tag" content="技术文档">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="NexT">
+<meta property="article:tag" content="GitHub">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2023/04/18/p9iJ1iV.png">
+
+
+<link rel="canonical" href="https://jayking-john.github.io/2023/04/18/blog-by-hexo-github3/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://jayking-john.github.io/2023/04/18/blog-by-hexo-github3/","path":"2023/04/18/blog-by-hexo-github3/","title":"博客技术 | 利用Github和Hexo构建自己的博客网站三"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>博客技术 | 利用Github和Hexo构建自己的博客网站三 | GeoScienceLab</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">GeoScienceLab</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">地理科学实验室</p>
+      <img class="custom-logo-image" src="/images/logo4.png" alt="GeoScienceLab">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">27</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">46</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">17</span></a></li><li class="menu-item menu-item-技术文档"><a href="/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/" rel="section"><i class="fa fa-tools fa-fw"></i>技术文档</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-number">1.</span> <span class="nav-text">NexT主题配置文件内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%93%E5%AD%98%E6%94%AF%E6%8C%81%EF%BC%9A%E5%85%81%E8%AE%B8%E7%BC%93%E5%AD%98%E5%86%85%E5%AE%B9%E7%94%9F%E6%88%90"><span class="nav-number">1.1.</span> <span class="nav-text">缓存支持：允许缓存内容生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%B0%8F%E5%8C%96%E6%94%AF%E6%8C%81%EF%BC%9A%E6%9C%80%E5%B0%8F%E5%8C%96Hexo%E7%94%9F%E6%88%90%EF%BC%8C%E7%A7%BB%E9%99%A4%E4%B8%8D%E5%BF%85%E8%A6%81%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">最小化支持：最小化Hexo生成，移除不必要文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E4%B8%BB%E9%A2%98"><span class="nav-number">1.3.</span> <span class="nav-text">选择主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%91%E5%A4%9C%E6%A8%A1%E5%BC%8F-%E6%B5%8B%E8%AF%95%E4%B8%8D%E7%AE%A1%E7%94%A8"><span class="nav-number">1.4.</span> <span class="nav-text">黑夜模式 (测试不管用)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E6%A0%87%E9%85%8D%E7%BD%AE"><span class="nav-number">1.5.</span> <span class="nav-text">图标配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89Logo%E6%94%AF%E6%8C%81"><span class="nav-number">1.6.</span> <span class="nav-text">自定义Logo支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E5%85%B1%E4%BA%AB%E5%8D%8F%E8%AE%AE"><span class="nav-number">1.7.</span> <span class="nav-text">知识共享协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E8%8F%9C%E5%8D%95%E9%A1%B9"><span class="nav-number">1.8.</span> <span class="nav-text">配置菜单项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%AD%90%E8%8F%9C%E5%8D%95"><span class="nav-number">1.9.</span> <span class="nav-text">动态子菜单</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="GeoScienceLab"
+      src="/images/logo.png">
+  <p class="site-author-name" itemprop="name">GeoScienceLab</p>
+  <div class="site-description" itemprop="description">遥感, 地信, Remote Sensing, GIS, Spatiotemporal Data, Technology</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">46</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:jayking-john@gmail.com" title="E-Mail → mailto:jayking-john@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/jayking-john" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jayking-john" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1272792144&website=www.oicqzone.com" title="QQ → tencent:&#x2F;&#x2F;AddContact&#x2F;?fromId&#x3D;45&amp;fromSubId&#x3D;1&amp;subcmd&#x3D;all&amp;uin&#x3D;1272792144&amp;website&#x3D;www.oicqzone.com" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.researchgate.net/profile/Huiwen-Li-2" title="ResearchG → https:&#x2F;&#x2F;www.researchgate.net&#x2F;profile&#x2F;Huiwen-Li-2" rel="noopener me" target="_blank"><i class="fab fa-researchgate fa-fw"></i>ResearchG</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://google.com/" title="https:&#x2F;&#x2F;google.com" rel="noopener" target="_blank">Google</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://baidu.com/" title="https:&#x2F;&#x2F;baidu.com" rel="noopener" target="_blank">Baidu</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2023/04/18/blog-by-hexo-github4/" rel="bookmark">
+        <time class="popular-posts-time">2023-04-18</time>
+        <br>
+      博客技术 | 利用Github和Hexo构建自己的博客网站四
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    
+    <div class="post-gallery-image">
+      <img src="https://s1.ax1x.com/2023/04/18/p9iJ1iV.png" itemprop="contentUrl">
+    </div>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jayking-john.github.io/2023/04/18/blog-by-hexo-github3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="GeoScienceLab">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GeoScienceLab">
+      <meta itemprop="description" content="遥感, 地信, Remote Sensing, GIS, Spatiotemporal Data, Technology">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="博客技术 | 利用Github和Hexo构建自己的博客网站三 | GeoScienceLab">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          博客技术 | 利用Github和Hexo构建自己的博客网站三
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-04-18 20:11:27 / 修改时间：20:15:13" itemprop="dateCreated datePublished" datetime="2023-04-18T20:11:27+08:00">2023-04-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/" itemprop="url" rel="index"><span itemprop="name">技术文档</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/%E5%8D%9A%E5%AE%A2%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">博客技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/%E5%8D%9A%E5%AE%A2%E6%8A%80%E6%9C%AF/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/%E5%8D%9A%E5%AE%A2%E6%8A%80%E6%9C%AF/Hexo/%E4%B8%BB%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">主题</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/%E5%8D%9A%E5%AE%A2%E6%8A%80%E6%9C%AF/Hexo/%E4%B8%BB%E9%A2%98/NexT/" itemprop="url" rel="index"><span itemprop="name">NexT</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <blockquote class="blockquote-center">
+<p><font size=4.5><em>Next基本配置一</em></font></p>
+
+</blockquote>
+<span id="more"></span>
+
+<h2 id="NexT主题配置文件内容"><a href="#NexT主题配置文件内容" class="headerlink" title="NexT主题配置文件内容"></a>NexT主题配置文件内容</h2><h3 id="缓存支持：允许缓存内容生成"><a href="#缓存支持：允许缓存内容生成" class="headerlink" title="缓存支持：允许缓存内容生成"></a>缓存支持：允许缓存内容生成</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Allow to cache content generation.</span><br><span class="line">cache:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+<h3 id="最小化支持：最小化Hexo生成，移除不必要文件"><a href="#最小化支持：最小化Hexo生成，移除不必要文件" class="headerlink" title="最小化支持：最小化Hexo生成，移除不必要文件"></a>最小化支持：最小化Hexo生成，移除不必要文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Remove unnecessary files after hexo generate.</span><br><span class="line">minify: true</span><br></pre></td></tr></table></figure>
+<h3 id="选择主题"><a href="#选择主题" class="headerlink" title="选择主题"></a>选择主题</h3><p>Scheme是NexT支持的一个特性，通过使用Scheme, NexT可以提供不同的视图。而且几乎所有的配置都可以被这些scheme使用。到目前为止，NexT支持4个方案：</p>
+<ul>
+<li>Muse → 默认方案，这是NexT的初始版本。使用黑白调，主要看起来干净。</li>
+<li>Mist → 一个紧凑的Muse版本，具有整洁的单列视图。</li>
+<li>Pisces → 双柱方案，清新。</li>
+<li>Gemini → 看起来像Pisces，但有明显的柱块和阴影，看起来更敏感的视图。</li>
+</ul>
+<p>可以通过编辑NexT配置文件，搜索方案关键字scheme 来更改。将看到4行方案设置，可以通过删除其中的#并将#添加到先前的scheme 中来启用其中的某个主题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line"># scheme: Muse</span><br><span class="line"># scheme: Mist</span><br><span class="line"># scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+<p>Muse主题：<br><img src="https://s1.ax1x.com/2023/04/18/p9iiZTI.png" alt="Muse" title="Muse"><br>Mist主题：<br><img src="https://s1.ax1x.com/2023/04/18/p9iP2Qg.png" alt="Mist" title="Mist"><br>Pisces主题：<br><img src="https://s1.ax1x.com/2023/04/18/p9iPRyQ.png" alt="Pisces" title="Pisces"><br>Gemini主题：<br><img src="https://s1.ax1x.com/2023/04/18/p9iPWLj.png" alt="Gemini" title="Gemini"></p>
+<h3 id="黑夜模式-测试不管用"><a href="#黑夜模式-测试不管用" class="headerlink" title="黑夜模式 (测试不管用)"></a>黑夜模式 (测试不管用)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Dark Mode</span><br><span class="line">darkmode: false</span><br></pre></td></tr></table></figure>
+
+<h3 id="图标配置"><a href="#图标配置" class="headerlink" title="图标配置"></a>图标配置</h3><p>默认情况下，NexT采用hexo-site&#x2F;themes&#x2F;next&#x2F;source&#x2F;images&#x2F;路径下的图标作为网站图标，可以进行替换</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: https://s1.ax1x.com/2023/04/18/p9iiq4P.png</span><br><span class="line">  medium: https://s1.ax1x.com/2023/04/18/p9iiq4P.png</span><br><span class="line">  apple_touch_icon: https://s1.ax1x.com/2023/04/18/p9iiq4P.png</span><br><span class="line">  safari_pinned_tab: https://s1.ax1x.com/2023/04/18/p9iiq4P.png</span><br><span class="line">  #android_manifest: /manifest.json</span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2023/04/18/p9iFi40.png" alt="网页导航窗口图标" title="网页导航窗口图标"></p>
+<h3 id="自定义Logo支持"><a href="#自定义Logo支持" class="headerlink" title="自定义Logo支持"></a>自定义Logo支持</h3><p>NexT支持网站标识个性化。<br>可以通过在NexT配置文件中添加custom_logo的图像url来启用它。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Custom Logo (Warning: Do not support scheme Mist)</span><br><span class="line">custom_logo: https://s1.ax1x.com/2023/04/18/p9ii4je.png</span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2023/04/18/p9iFbqJ.md.png" alt="自定义logo" title="自定义logo"></p>
+<blockquote>
+<p>Mist主题不支持自定义标识设置。</p>
+</blockquote>
+<h3 id="知识共享协议"><a href="#知识共享协议" class="headerlink" title="知识共享协议"></a>知识共享协议</h3><p>NexT支持在侧边栏和帖子中显示知识共享4.0国际许可，包括by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | cc-zero。这些许可允许创造者为了接收者或其他创造者的利益而交流他们保留哪些权利，以及他们放弃哪些权利。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">creative_commons:</span><br><span class="line">  # Available values: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | cc-zero</span><br><span class="line">  license: by-nc-sa</span><br><span class="line">  # Available values: big | small</span><br><span class="line">  size: small</span><br><span class="line">  sidebar: false</span><br><span class="line">  post: false</span><br><span class="line">  # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh</span><br><span class="line">  # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org</span><br><span class="line">  language:</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置菜单项"><a href="#配置菜单项" class="headerlink" title="配置菜单项"></a>配置菜单项</h3><p>菜单设置包含三个值：key: &#x2F;link&#x2F; || icon</p>
+<ol>
+<li>key<br>key是菜单的名称（比如：主页，集合等）<br>如果在languages中能找到翻译，那么这个菜单名称将使用翻译名称，否则，则使用Key名称。</li>
+</ol>
+<blockquote>
+<p>key区分大小写(例如Home和home不一样)。</p>
+</blockquote>
+<ol start="2">
+<li><p>link<br>在定界符 || 前面的（&#x2F;link&#x2F;）是指向站点内相对url的目标链接</p>
+</li>
+<li><p>icon<br>定界符 || 后面的(图标) 是字体Awesome图标的名称。图标的名称可以在<a target="_blank" rel="noopener" href="https://fontawesome.com/search">Font Awesome网站</a>上找到。</p>
+</li>
+</ol>
+<p>要自定义菜单项，在NexT配置文件中编辑以下内容:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># ---------------------------------------------------------------</span><br><span class="line"># Menu Settings</span><br><span class="line"># ---------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"># Usage: `Key: /link/ || icon`</span><br><span class="line"># Key is the name of menu item. If the translation for this item is available, the translated text will be loaded, otherwise the Key name will be used. Key is case-sensitive.</span><br><span class="line"># Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.</span><br><span class="line"># External url should start with http:// or https://</span><br><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  about: /about/ || fa fa-user</span><br><span class="line">  tags: /tags/ || fa fa-tags</span><br><span class="line">  categories: /categories/ || fa fa-th</span><br><span class="line">  archives: /archives/ || fa fa-archive</span><br><span class="line">  #schedule: /schedule/ || fa fa-calendar</span><br><span class="line">  #sitemap: /sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: /404/ || fa fa-heartbeat</span><br><span class="line"></span><br><span class="line"># Enable / Disable menu icons / item badges.</span><br><span class="line">menu_settings:</span><br><span class="line">  icons: true</span><br><span class="line">  badges: false</span><br></pre></td></tr></table></figure>
+<p> <img src="https://s1.ax1x.com/2023/04/18/p9iEvin.md.png" alt="菜单设置" title="设置菜单"></p>
+<p> 但此时，除了首页和归档以外，其他的菜单也都是没有内容的。<br> 除了主页和档案，菜单部分下的所有自定义页面都需要手动创建。</p>
+<h3 id="动态子菜单"><a href="#动态子菜单" class="headerlink" title="动态子菜单"></a>动态子菜单</h3><p> 还支持层次结构中的动态子菜单。在NexT配置文件的菜单部分中添加子菜单项，如下所示<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line"> home: / || fa fa-home</span><br><span class="line"> about: /about/ || fa fa-user</span><br><span class="line"> tags: /tags/ || fa fa-tags</span><br><span class="line"> categories: /categories/ || fa fa-th</span><br><span class="line"> archives: /archives/ || fa fa-archive</span><br><span class="line"> #schedule: /schedule/ || fa fa-calendar</span><br><span class="line"> #sitemap: /sitemap.xml || fa fa-sitemap</span><br><span class="line"> #commonweal: /404/ || fa fa-heartbeat</span><br><span class="line"> Docs:</span><br><span class="line">   default: /docs/ || fa fa-book</span><br><span class="line">   Getting Started:</span><br><span class="line">     default: /getting-started/ || fa fa-flag</span><br><span class="line">     Installation: /installation.html || fa fa-download</span><br><span class="line">     Configuration: /configuration.html || fa fa-wrench</span><br><span class="line">   Third Party Plugins:</span><br><span class="line">     default: /third-party-services/ || fa fa-puzzle-piece</span><br><span class="line">     Math Equations: /math-equations.html || fa fa-square-root-alt</span><br><span class="line">     Comment Systems: /comments.html || fa fa-comment-alt</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>每个子菜单项都需要一个默认页面。</p>
+</blockquote>
+<p> 默认情况下，NexT显示菜单项的图标。</p>
+<p> 可以通过编辑NexT config file中menu_settings.icons部分的值来配置。<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">menu_settings:</span><br><span class="line">icons: true</span><br></pre></td></tr></table></figure></p>
+<p>将badges设置为true在菜单栏侧边展示文章、归类和标签的个数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">menu_settings:</span><br><span class="line">  icons: true</span><br><span class="line">  badges: true</span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2023/04/18/p9iVql6.png" alt="菜单栏项目数量" title="菜单栏项目数量"></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/reward/wechatpay.png" alt="GeoScienceLab 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/" rel="tag"><i class="fa fa-tag"></i> 技术文档</a>
+              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+              <a href="/tags/NexT/" rel="tag"><i class="fa fa-tag"></i> NexT</a>
+              <a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/04/18/blog-by-hexo-github4/" rel="prev" title="博客技术 | 利用Github和Hexo构建自己的博客网站四">
+                  <i class="fa fa-chevron-left"></i> 博客技术 | 利用Github和Hexo构建自己的博客网站四
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/04/18/blog-by-hexo-github2/" rel="next" title="博客技术 | 利用Github和Hexo构建自己的博客网站二">
+                  博客技术 | 利用Github和Hexo构建自己的博客网站二 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="lv-container" data-id="city" data-uid="MTAyMC81ODI4MS8zNDc0NA=="></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Smith</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">16k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">1:01</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+<script src="/js/third-party/comments/livere.js"></script>
+
+</body>
+</html>
